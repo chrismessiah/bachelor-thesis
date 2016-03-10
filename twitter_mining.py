@@ -8,6 +8,12 @@ from tweepy import API
 import json
 import pprint
 
+# Amount of tweets to fetch
+amont_of_tweets = 1000
+
+# User to fetch tweets from
+nickname = "Michael__Putnam"
+
 #Variables that contains the user credentials to access Twitter API 
 access_token = "4891415603-ZM8LKg9VjAqGxSIL4xo7jwbEbqkpyURDGl4UrOw"
 access_token_secret = "0hCSgD6YrC3wajSVcJ4G0OGFbkEIb1TTUvCFKUNscKcQG"
@@ -39,8 +45,7 @@ if __name__ == '__main__':
     #     print(status.text)
         #print(status.created_at)
         #print(status.screen_name)
-    nickname = "Michael__Putnam"
-    status = api.user_timeline(screen_name=nickname, count=10)
+    status = api.user_timeline(screen_name=nickname, count=amont_of_tweets)
     tweetlist = []
     for items in status:
         tweet = {}
