@@ -7,15 +7,15 @@
 # Golfjobb
 
 ## Features:
-Get list of 'golfkex' followers
-Get tweets from API with (not fully tested) error handling
-Score tweets
-Save tweets to file, dict on every line.
-Calculate avrage within timespan (calculate.py)
+- Get list of 'golfkex' followers
+- Get tweets from API with (not fully tested) error handling
+- Score tweets
+- Save tweets to file, dict on every line.
+- Calculate avrage within timespan (calculate.py)
 
 ## ToDo:
-Get golfer statistics from PGA
-Statistics modules to calculate.py
+- Get golfer statistics from PGA
+- Statistics modules to calculate.py
 
 
 ## Installation
