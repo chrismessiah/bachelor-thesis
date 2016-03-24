@@ -2,3 +2,5 @@ afinn/*
 env/*
 *.sublime-project
 *.sublime-workspace
+tweepy/*
+golfdata/*_files
