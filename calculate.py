@@ -33,6 +33,6 @@ def tweet_interval_avg(dateObj, num_days, tweet_objects):
     return total_score / hits
 
 if __name__ == '__main__':
-	tweets = get_tweets_from_file("resultsFile.txt")
-	avg = tweet_interval_avg(datetime.datetime.strptime("2015-06-01" ,"%Y-%m-%d"), 5, tweets)
+	tweets = get_tweets_from_file("golfersRun27mars.txt")
+	avg = tweet_interval_avg(datetime.datetime.strptime("2015-06-01" ,"%Y-%m-%d"), 3, tweets)
 	print("Average within 5 days from 2016-06-01: ", avg)
