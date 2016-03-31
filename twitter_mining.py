@@ -6,12 +6,14 @@ from tweepy import Stream
 from tweepy import Cursor
 from tweepy import API
 from tweepy import RateLimitError
+from tweepy import TweepError
 from datetime import datetime
+from tqdm import tqdm
 import time
 import json
 import pprint
-
-
+import logging
+logging.captureWarnings(True)
 #load Afinn
 afinn = Afinn()
 # Amount of tweets to fetch
@@ -53,7 +55,7 @@ def get_tweets(tweeter_id, from_id = None):
     tweetlist = []
     last_id = 0
 
-    print("Cleaning tweets from :", status[0].user.screen_name, "id: ", tweeter_id)
+    #print("Cleaning tweets from :", status.user.screen_name, "id: ", tweeter_id)
     for items in status:
         tweet = {}
         tweet["id"] = items.id
@@ -111,7 +113,7 @@ def run(tweeter_id):
 
     two_results = result + result_2
 
-    with open("resultsFile.txt", "w") as f:
+    with open("resultsFile.txt", "a") as f:
         for items in two_results:
             f.write(str(items))
             f.write("\n")
@@ -122,13 +124,19 @@ def get_golfers():
     api = API(auth)
     
     golfers = api.friends_ids(screen_name = "golfjobb")
+    print("GOlfers: ", golfers)
     return golfers
 
 if __name__ == '__main__':
     golfers = get_golfers()
 
-    for golfer_id in golfers[12:13]:
-        run(golfer_id)
+    for golfer_id in tqdm(golfers):
+        try:
+            run(golfer_id)
+        except TweepError:
+            with open("resultsFile.txt", "a") as f:
+                f.write("TweepError detected when processing: " +  str(golfer_id))
+                f.write("\n")
 
 
 
