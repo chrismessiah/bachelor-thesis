@@ -32,7 +32,21 @@ def tweet_interval_avg(dateObj, num_days, tweet_objects):
 
     return total_score / hits
 
+def tweets_per_golfer(tweets):
+    golf_list = []
+    for tweet in tweets:
+        golfers = {}
+        if tweet["realname"] not in golfers:
+            golfers[ tweet["realname"] ] = 1
+        else:
+            golfers[ tweet["realname"] ] += 1
+
+        golfers["oldest"] = tweet["date"]
+        golf_list.append(golfers)
+    return golf_list
+
 if __name__ == '__main__':
-	tweets = get_tweets_from_file("resultsFile.txt")
-	avg = tweet_interval_avg(datetime.datetime.strptime("2015-06-01" ,"%Y-%m-%d"), 5, tweets)
-	print("Average within 5 days from 2016-06-01: ", avg)
+    tweets = get_tweets_from_file("golfersRun27mars.txt")
+    avg = tweet_interval_avg(datetime.datetime.strptime("2015-06-01" ,"%Y-%m-%d"), 5, tweets)
+    #print("Average within 5 days from 2016-06-01: ", avg)
+    print(tweets_per_golfer(tweets))
