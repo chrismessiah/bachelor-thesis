@@ -1,0 +1,33 @@
+{'name': 'Sep 25, Sun'}
+{'name': 'ROUNDS'}
+{'name': 'ROUNDS'}
+{'name': '1'}
+{'R4': 69, 'name': 'Jordan Spieth', 'R2': 66, 'R3': 68, 'score': 271, 'R1': 68}
+{'R4': 65, 'name': 'Danny Lee', 'R2': 72, 'R3': 69, 'score': 275, 'R1': 69}
+{'R4': 66, 'name': 'Justin Rose', 'R2': 68, 'R3': 71, 'score': 275, 'R1': 70}
+{'R4': 72, 'name': 'Henrik Stenson', 'R2': 68, 'R3': 72, 'score': 275, 'R1': 63}
+{'R4': 70, 'name': 'Paul Casey', 'R2': 70, 'R3': 71, 'score': 276, 'R1': 65}
+{'R4': 64, 'name': 'Dustin Johnson', 'R2': 72, 'R3': 71, 'score': 276, 'R1': 69}
+{'R4': 67, 'name': 'Bubba Watson', 'R2': 71, 'R3': 68, 'score': 276, 'R1': 70}
+{'R4': 69, 'name': 'J.B. Holmes', 'R2': 72, 'R3': 68, 'score': 277, 'R1': 68}
+{'R4': 70, 'name': 'Zach Johnson', 'R2': 70, 'R3': 71, 'score': 277, 'R1': 66}
+{'R4': 68, 'name': 'Jason Day', 'R2': 71, 'R3': 70, 'score': 278, 'R1': 69}
+{'R4': 68, 'name': 'Matt Kuchar', 'R2': 70, 'R3': 69, 'score': 278, 'R1': 71}
+{'R4': 70, 'name': 'Daniel Berger', 'R2': 73, 'R3': 68, 'score': 280, 'R1': 69}
+{'R4': 70, 'name': 'Steven Bowditch', 'R2': 69, 'R3': 73, 'score': 280, 'R1': 68}
+{'R4': 74, 'name': 'Rickie Fowler', 'R2': 70, 'R3': 67, 'score': 280, 'R1': 69}
+{'R4': 70, 'name': 'Hideki Matsuyama', 'R2': 72, 'R3': 69, 'score': 280, 'R1': 69}
+{'R4': 74, 'name': 'Rory McIlroy', 'R2': 71, 'R3': 70, 'score': 281, 'R1': 66}
+{'R4': 70, 'name': 'Kevin Na', 'R2': 73, 'R3': 70, 'score': 281, 'R1': 68}
+{'R4': 69, 'name': 'Sangmoon Bae', 'R2': 70, 'R3': 72, 'score': 284, 'R1': 73}
+{'R4': 70, 'name': 'Brooks Koepka', 'R2': 74, 'R3': 72, 'score': 284, 'R1': 68}
+{'R4': 65, 'name': 'Robert Streb', 'R2': 75, 'R3': 69, 'score': 284, 'R1': 75}
+{'R4': 66, 'name': 'Jimmy Walker', 'R2': 71, 'R3': 74, 'score': 284, 'R1': 73}
+{'R4': 67, 'name': 'Harris English', 'R2': 76, 'R3': 71, 'score': 285, 'R1': 71}
+{'R4': 70, 'name': 'Charley Hoffman', 'R2': 72, 'R3': 70, 'score': 285, 'R1': 73}
+{'R4': 70, 'name': 'Brandt Snedeker', 'R2': 72, 'R3': 75, 'score': 285, 'R1': 68}
+{'R4': 70, 'name': 'Scott Piercy', 'R2': 73, 'R3': 73, 'score': 290, 'R1': 74}
+{'R4': 76, 'name': 'Bill Haas', 'R2': 73, 'R3': 72, 'score': 293, 'R1': 72}
+{'R4': 71, 'name': 'Patrick Reed', 'R2': 74, 'R3': 77, 'score': 294, 'R1': 72}
+{'R4': 73, 'name': 'Kevin Kisner', 'R2': 77, 'R3': 72, 'score': 298, 'R1': 76}
+{'R4': '--', 'name': 'Louis Oosthuizen', 'R2': '--', 'R3': '--', 'score': '--', 'R1': '--'}

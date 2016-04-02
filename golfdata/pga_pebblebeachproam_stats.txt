@@ -1,0 +1,156 @@
+{'R4': 65, 'total': -17, 'name': 'Vaughn Taylor \\xa0(PB)', 'R2': 68, 'R3': 67, 'strokes': 270, 'per_round': -7, 'thru': 'F', 'R1': 70}
+{'R4': 72, 'total': -16, 'name': 'Phil Mickelson \\xa0(PB)', 'R2': 65, 'R3': 66, 'strokes': 271, 'per_round': 0, 'thru': 'F', 'R1': 68}
+{'R4': 69, 'total': -15, 'name': 'Jonas Blixt \\xa0(PB)', 'R2': 69, 'R3': 67, 'strokes': 272, 'per_round': -3, 'thru': 'F', 'R1': 67}
+{'R4': 71, 'total': -14, 'name': 'Freddie Jacobson \\xa0(PB)', 'R2': 69, 'R3': 68, 'strokes': 273, 'per_round': -1, 'thru': 'F', 'R1': 65}
+{'R4': 72, 'total': -14, 'name': 'Hiroshi Iwata \\xa0(PB)', 'R2': 66, 'R3': 69, 'strokes': 273, 'per_round': 0, 'thru': 'F', 'R1': 66}
+{'R4': 65, 'total': -12, 'name': 'Patrick Reed \\xa0(PB)', 'R2': 65, 'R3': 73, 'strokes': 275, 'per_round': -7, 'thru': 'F', 'R1': 72}
+{'R4': 69, 'total': -12, 'name': 'Justin Rose \\xa0(PB)', 'R2': 68, 'R3': 72, 'strokes': 275, 'per_round': -3, 'thru': 'F', 'R1': 66}
+{'R4': 70, 'total': -10, 'name': 'Brooks Koepka \\xa0(PB)', 'R2': 70, 'R3': 69, 'strokes': 277, 'per_round': -2, 'thru': 'F', 'R1': 68}
+{'R4': 71, 'total': -10, 'name': 'Bill Haas \\xa0(PB)', 'R2': 68, 'R3': 69, 'strokes': 277, 'per_round': -1, 'thru': 'F', 'R1': 69}
+{'R4': 74, 'total': -10, 'name': 'Roberto Castro \\xa0(PB)', 'R2': 70, 'R3': 67, 'strokes': 277, 'per_round': 2, 'thru': 'F', 'R1': 66}
+{'R4': 67, 'total': -9, 'name': 'Lucas Glover \\xa0(PB)', 'R2': 66, 'R3': 72, 'strokes': 278, 'per_round': -5, 'thru': 'F', 'R1': 73}
+{'R4': 70, 'total': -9, 'name': 'J.B. Holmes \\xa0(PB)', 'R2': 72, 'R3': 70, 'strokes': 278, 'per_round': -2, 'thru': 'F', 'R1': 66}
+{'R4': 70, 'total': -9, 'name': 'Cameron Smith \\xa0(PB)', 'R2': 75, 'R3': 69, 'strokes': 278, 'per_round': -2, 'thru': 'F', 'R1': 64}
+{'R4': 72, 'total': -9, 'name': 'Jimmy Walker \\xa0(PB)', 'R2': 71, 'R3': 63, 'strokes': 278, 'per_round': 0, 'thru': 'F', 'R1': 72}
+{'R4': 73, 'total': -9, 'name': 'Matt Jones \\xa0(PB)', 'R2': 70, 'R3': 67, 'strokes': 278, 'per_round': 1, 'thru': 'F', 'R1': 68}
+{'R4': 73, 'total': -9, 'name': 'Jason Day \\xa0(PB)', 'R2': 66, 'R3': 68, 'strokes': 278, 'per_round': 1, 'thru': 'F', 'R1': 71}
+{'R4': 69, 'total': -8, 'name': 'Kevin Streelman \\xa0(PB)', 'R2': 71, 'R3': 69, 'strokes': 279, 'per_round': -3, 'thru': 'F', 'R1': 70}
+{'R4': 69, 'total': -8, 'name': 'Tyler Aldridge \\xa0(PB)', 'R2': 72, 'R3': 68, 'strokes': 279, 'per_round': -3, 'thru': 'F', 'R1': 70}
+{'R4': 71, 'total': -8, 'name': 'Jim Herman \\xa0(PB)', 'R2': 67, 'R3': 72, 'strokes': 279, 'per_round': -1, 'thru': 'F', 'R1': 69}
+{'R4': 77, 'total': -8, 'name': 'Sung Kang \\xa0(PB)', 'R2': 60, 'R3': 70, 'strokes': 279, 'per_round': 5, 'thru': 'F', 'R1': 72}
+{'R4': 69, 'total': -7, 'name': 'Spencer Levin \\xa0(PB)', 'R2': 73, 'R3': 72, 'strokes': 280, 'per_round': -3, 'thru': 'F', 'R1': 66}
+{'R4': 68, 'total': -7, 'name': 'Bronson Burgoon \\xa0(PB)', 'R2': 76, 'R3': 72, 'strokes': 280, 'per_round': -4, 'thru': 'F*', 'R1': 64}
+{'R4': 70, 'total': -7, 'name': 'Stewart Cink \\xa0(PB)', 'R2': 68, 'R3': 72, 'strokes': 280, 'per_round': -2, 'thru': 'F', 'R1': 70}
+{'R4': 74, 'total': -7, 'name': 'Padraig Harrington \\xa0(PB)', 'R2': 71, 'R3': 67, 'strokes': 280, 'per_round': 2, 'thru': 'F', 'R1': 68}
+{'R4': 66, 'total': -7, 'name': 'Jordan Spieth \\xa0(PB)', 'R2': 69, 'R3': 74, 'strokes': 280, 'per_round': -6, 'thru': 'F*', 'R1': 71}
+{'R4': 70, 'total': -6, 'name': 'Dawie van der Walt \\xa0(PB)', 'R2': 76, 'R3': 69, 'strokes': 281, 'per_round': -2, 'thru': 'F*', 'R1': 66}
+{'R4': 73, 'total': -6, 'name': 'Luke Donald \\xa0(PB)', 'R2': 69, 'R3': 69, 'strokes': 281, 'per_round': 1, 'thru': 'F', 'R1': 70}
+{'R4': 75, 'total': -6, 'name': 'Mark Hubbard \\xa0(PB)', 'R2': 66, 'R3': 70, 'strokes': 281, 'per_round': 3, 'thru': 'F', 'R1': 70}
+{'R4': 77, 'total': -6, 'name': 'Chez Reavie \\xa0(PB)', 'R2': 70, 'R3': 71, 'strokes': 281, 'per_round': 5, 'thru': 'F', 'R1': 63}
+{'R4': 71, 'total': -5, 'name': 'Danny Lee \\xa0(PB)', 'R2': 66, 'R3': 74, 'strokes': 282, 'per_round': -1, 'thru': 'F', 'R1': 71}
+{'R4': 71, 'total': -5, 'name': 'Nick Taylor \\xa0(PB)', 'R2': 68, 'R3': 72, 'strokes': 282, 'per_round': -1, 'thru': 'F', 'R1': 71}
+{'R4': 74, 'total': -5, 'name': 'David Hearn \\xa0(PB)', 'R2': 70, 'R3': 71, 'strokes': 282, 'per_round': 2, 'thru': 'F', 'R1': 67}
+{'R4': 69, 'total': -5, 'name': 'Jason Kokrak \\xa0(PB)', 'R2': 74, 'R3': 67, 'strokes': 282, 'per_round': -3, 'thru': 'F*', 'R1': 72}
+{'R4': 70, 'total': -4, 'name': 'Steve Marino \\xa0(PB)', 'R2': 72, 'R3': 70, 'strokes': 283, 'per_round': -2, 'thru': 'F*', 'R1': 71}
+{'R4': 72, 'total': -3, 'name': 'Si Woo Kim \\xa0(PB)', 'R2': 70, 'R3': 72, 'strokes': 284, 'per_round': 0, 'thru': 'F*', 'R1': 70}
+{'R4': 72, 'total': -3, 'name': 'Will Wilcox \\xa0(PB)', 'R2': 73, 'R3': 68, 'strokes': 284, 'per_round': 0, 'thru': 'F*', 'R1': 71}
+{'R4': 72, 'total': -3, 'name': 'Luke Guthrie \\xa0(PB)', 'R2': 70, 'R3': 70, 'strokes': 284, 'per_round': 0, 'thru': 'F*', 'R1': 72}
+{'R4': 71, 'total': -3, 'name': 'Brandt Snedeker \\xa0(PB)', 'R2': 71, 'R3': 70, 'strokes': 284, 'per_round': -1, 'thru': 'F*', 'R1': 72}
+{'R4': 71, 'total': -3, 'name': 'Shane Bertsch \\xa0(PB)', 'R2': 75, 'R3': 72, 'strokes': 284, 'per_round': -1, 'thru': 'F*', 'R1': 66}
+{'R4': 70, 'total': -3, 'name': '" Sean O\\\\\'Hair \\xa0(PB) "', 'R2': 72, 'R3': 75, 'strokes': 284, 'per_round': -2, 'thru': 'F*', 'R1': 67}
+{'R4': 74, 'total': -2, 'name': 'Tom Hoge \\xa0(PB)', 'R2': 73, 'R3': 69, 'strokes': 285, 'per_round': 2, 'thru': 'F*', 'R1': 69}
+{'R4': 73, 'total': -2, 'name': 'Ryan Palmer \\xa0(PB)', 'R2': 69, 'R3': 71, 'strokes': 285, 'per_round': 1, 'thru': 'F*', 'R1': 72}
+{'R4': 73, 'total': -2, 'name': 'Andrew Loupe \\xa0(PB)', 'R2': 72, 'R3': 72, 'strokes': 285, 'per_round': 1, 'thru': 'F*', 'R1': 68}
+{'R4': 73, 'total': -2, 'name': 'Kyle Stanley \\xa0(PB)', 'R2': 73, 'R3': 68, 'strokes': 285, 'per_round': 1, 'thru': 'F*', 'R1': 71}
+{'R4': 72, 'total': -2, 'name': 'Alex Cejka \\xa0(PB)', 'R2': 71, 'R3': 72, 'strokes': 285, 'per_round': 0, 'thru': 'F*', 'R1': 70}
+{'R4': 77, 'total': -2, 'name': 'Ricky Barnes \\xa0(PB)', 'R2': 70, 'R3': 73, 'strokes': 285, 'per_round': 5, 'thru': 'F', 'R1': 65}
+{'R4': 72, 'total': -2, 'name': 'Pat Perez \\xa0(PB)', 'R2': 71, 'R3': 73, 'strokes': 285, 'per_round': 0, 'thru': 'F*', 'R1': 69}
+{'R4': 71, 'total': -2, 'name': 'Steven Bowditch \\xa0(PB)', 'R2': 72, 'R3': 74, 'strokes': 285, 'per_round': -1, 'thru': 'F*', 'R1': 68}
+{'R4': 71, 'total': -2, 'name': 'Shane Lowry \\xa0(PB)', 'R2': 72, 'R3': 71, 'strokes': 285, 'per_round': -1, 'thru': 'F*', 'R1': 71}
+{'R4': 71, 'total': -2, 'name': 'Dustin Johnson \\xa0(PB)', 'R2': 73, 'R3': 71, 'strokes': 285, 'per_round': -1, 'thru': 'F*', 'R1': 70}
+{'R4': 75, 'total': -1, 'name': 'Jonathan Byrd \\xa0(PB)', 'R2': 68, 'R3': 73, 'strokes': 286, 'per_round': 3, 'thru': 'F', 'R1': 70}
+{'R4': 74, 'total': -1, 'name': 'Aaron Baddeley \\xa0(PB)', 'R2': 70, 'R3': 73, 'strokes': 286, 'per_round': 2, 'thru': 'F*', 'R1': 69}
+{'R4': 74, 'total': -1, 'name': 'Colt Knost \\xa0(PB)', 'R2': 72, 'R3': 68, 'strokes': 286, 'per_round': 2, 'thru': 'F*', 'R1': 72}
+{'R4': 74, 'total': -1, 'name': 'Billy Hurley III \\xa0(PB)', 'R2': 71, 'R3': 73, 'strokes': 286, 'per_round': 2, 'thru': 'F*', 'R1': 68}
+{'R4': 72, 'total': -1, 'name': 'Jason Gore \\xa0(PB)', 'R2': 74, 'R3': 74, 'strokes': 286, 'per_round': 0, 'thru': 'F*', 'R1': 66}
+{'R4': 72, 'total': -1, 'name': 'Jason Dufner \\xa0(PB)', 'R2': 74, 'R3': 69, 'strokes': 286, 'per_round': 0, 'thru': 'F*', 'R1': 71}
+{'R4': 72, 'total': -1, 'name': 'Derek Fathauer \\xa0(PB)', 'R2': 67, 'R3': 71, 'strokes': 286, 'per_round': 0, 'thru': 'F*', 'R1': 76}
+{'R4': 77, 'total': 0, 'name': 'Jason Bohn \\xa0(PB)', 'R2': 73, 'R3': 66, 'strokes': 287, 'per_round': 5, 'thru': 'F', 'R1': 71}
+{'R4': 73, 'total': 0, 'name': 'Brian Gay \\xa0(PB)', 'R2': 74, 'R3': 68, 'strokes': 287, 'per_round': 1, 'thru': 'F*', 'R1': 72}
+{'R4': 78, 'total': 1, 'name': 'Ryan Ruffels \\xa0(PB)', 'R2': 70, 'R3': 73, 'strokes': 288, 'per_round': 6, 'thru': 'F', 'R1': 67}
+{'R4': 75, 'total': 1, 'name': 'Thomas Aiken \\xa0(PB)', 'R2': 73, 'R3': 72, 'strokes': 288, 'per_round': 3, 'thru': 'F*', 'R1': 68}
+{'R4': 74, 'total': 1, 'name': 'Zac Blair \\xa0(PB)', 'R2': 73, 'R3': 71, 'strokes': 288, 'per_round': 2, 'thru': 'F*', 'R1': 70}
+{'R4': 74, 'total': 1, 'name': 'Dicky Pride \\xa0(PB)', 'R2': 75, 'R3': 68, 'strokes': 288, 'per_round': 2, 'thru': 'F*', 'R1': 71}
+{'R4': 74, 'total': 1, 'name': 'Austin Connelly \\xa0(PB)', 'R2': 73, 'R3': 71, 'strokes': 288, 'per_round': 2, 'thru': 'F*', 'R1': 70}
+{'R4': 74, 'total': 1, 'name': 'Tyrone Van Aswegen \\xa0(PB)', 'R2': 69, 'R3': 70, 'strokes': 288, 'per_round': 2, 'thru': 'F*', 'R1': 75}
+{'R4': 76, 'total': 2, 'name': 'Davis Love III \\xa0(PB)', 'R2': 68, 'R3': 71, 'strokes': 289, 'per_round': 4, 'thru': 'F*', 'R1': 74}
+{'R4': 75, 'total': 2, 'name': 'Peter Malnati \\xa0(PB)', 'R2': 73, 'R3': 68, 'strokes': 289, 'per_round': 3, 'thru': 'F*', 'R1': 73}
+{'R4': 76, 'total': 3, 'name': 'Rhein Gibson \\xa0(PB)', 'R2': 73, 'R3': 74, 'strokes': 290, 'per_round': 4, 'thru': 'F*', 'R1': 67}
+{'R4': 78, 'total': 5, 'name': 'Jerry Kelly \\xa0(PB)', 'R2': 69, 'R3': 74, 'strokes': 292, 'per_round': 6, 'thru': 'F*', 'R1': 71}
+{'R4': '--', 'total': 0, 'name': 'John Rollins', 'R2': 68, 'R3': 75, 'strokes': 215, 'per_round': '--', 'thru': '--', 'R1': 72}
+{'R4': '--', 'total': 0, 'name': 'Kelly Kraft', 'R2': 72, 'R3': 70, 'strokes': 215, 'per_round': '--', 'thru': '--', 'R1': 73}
+{'R4': '--', 'total': 0, 'name': 'Andrew Landry', 'R2': 73, 'R3': 72, 'strokes': 215, 'per_round': '--', 'thru': '--', 'R1': 70}
+{'R4': '--', 'total': 0, 'name': 'D.A. Points', 'R2': 69, 'R3': 72, 'strokes': 215, 'per_round': '--', 'thru': '--', 'R1': 74}
+{'R4': '--', 'total': 0, 'name': 'Tom Gillis', 'R2': 76, 'R3': 72, 'strokes': 215, 'per_round': '--', 'thru': '--', 'R1': 67}
+{'R4': '--', 'total': 0, 'name': 'Bubba Watson', 'R2': 68, 'R3': 74, 'strokes': 215, 'per_round': '--', 'thru': '--', 'R1': 73}
+{'R4': '--', 'total': 0, 'name': 'Rob Oppenheim', 'R2': 74, 'R3': 68, 'strokes': 215, 'per_round': '--', 'thru': '--', 'R1': 73}
+{'R4': '--', 'total': 0, 'name': 'Miguel Angel Carballo', 'R2': 71, 'R3': 75, 'strokes': 215, 'per_round': '--', 'thru': '--', 'R1': 69}
+{'R4': '--', 'total': 0, 'name': 'Hunter Mahan', 'R2': 73, 'R3': 72, 'strokes': 215, 'per_round': '--', 'thru': '--', 'R1': 70}
+{'R4': '--', 'total': 0, 'name': 'J.J. Henry', 'R2': 73, 'R3': 72, 'strokes': 215, 'per_round': '--', 'thru': '--', 'R1': 70}
+{'R4': '--', 'total': 0, 'name': 'Henrik Norlander', 'R2': 75, 'R3': 70, 'strokes': 215, 'per_round': '--', 'thru': '--', 'R1': 70}
+{'R4': '--', 'total': 1, 'name': 'Marc Turnesa', 'R2': 70, 'R3': 76, 'strokes': 216, 'per_round': '--', 'thru': '--', 'R1': 70}
+{'R4': '--', 'total': 1, 'name': 'Chris Stroud', 'R2': 72, 'R3': 73, 'strokes': 216, 'per_round': '--', 'thru': '--', 'R1': 71}
+{'R4': '--', 'total': 1, 'name': 'Martin Piller', 'R2': 71, 'R3': 72, 'strokes': 216, 'per_round': '--', 'thru': '--', 'R1': 73}
+{'R4': '--', 'total': 1, 'name': 'Sam Saunders', 'R2': 79, 'R3': 67, 'strokes': 216, 'per_round': '--', 'thru': '--', 'R1': 70}
+{'R4': '--', 'total': 1, 'name': 'Jon Curran', 'R2': 70, 'R3': 72, 'strokes': 216, 'per_round': '--', 'thru': '--', 'R1': 74}
+{'R4': '--', 'total': 1, 'name': 'Troy Merritt', 'R2': 71, 'R3': 78, 'strokes': 216, 'per_round': '--', 'thru': '--', 'R1': 67}
+{'R4': '--', 'total': 1, 'name': 'Brian Stuard', 'R2': 75, 'R3': 73, 'strokes': 216, 'per_round': '--', 'thru': '--', 'R1': 68}
+{'R4': '--', 'total': 1, 'name': 'Bud Cauley', 'R2': 72, 'R3': 76, 'strokes': 216, 'per_round': '--', 'thru': '--', 'R1': 68}
+{'R4': '--', 'total': 1, 'name': 'Wes Roach', 'R2': 69, 'R3': 75, 'strokes': 216, 'per_round': '--', 'thru': '--', 'R1': 72}
+{'R4': '--', 'total': 2, 'name': 'Jhonattan Vegas', 'R2': 71, 'R3': 75, 'strokes': 217, 'per_round': '--', 'thru': '--', 'R1': 71}
+{'R4': '--', 'total': 2, 'name': 'Jarrod Lyle', 'R2': 71, 'R3': 74, 'strokes': 217, 'per_round': '--', 'thru': '--', 'R1': 72}
+{'R4': '--', 'total': 2, 'name': 'Kevin Chappell', 'R2': 76, 'R3': 72, 'strokes': 217, 'per_round': '--', 'thru': '--', 'R1': 69}
+{'R4': '--', 'total': 2, 'name': 'Hunter Stewart', 'R2': 69, 'R3': 76, 'strokes': 217, 'per_round': '--', 'thru': '--', 'R1': 72}
+{'R4': '--', 'total': 2, 'name': 'Geoff Ogilvy', 'R2': 67, 'R3': 76, 'strokes': 217, 'per_round': '--', 'thru': '--', 'R1': 74}
+{'R4': '--', 'total': 2, 'name': 'Joel Stalter', 'R2': 70, 'R3': 73, 'strokes': 217, 'per_round': '--', 'thru': '--', 'R1': 74}
+{'R4': '--', 'total': 2, 'name': 'Scott Brown', 'R2': 70, 'R3': 74, 'strokes': 217, 'per_round': '--', 'thru': '--', 'R1': 73}
+{'R4': '--', 'total': 2, 'name': 'Ted Purdy', 'R2': 75, 'R3': 69, 'strokes': 217, 'per_round': '--', 'thru': '--', 'R1': 73}
+{'R4': '--', 'total': 2, 'name': 'Andres Romero', 'R2': 73, 'R3': 72, 'strokes': 217, 'per_round': '--', 'thru': '--', 'R1': 72}
+{'R4': '--', 'total': 2, 'name': 'Alex Prugh', 'R2': 73, 'R3': 74, 'strokes': 217, 'per_round': '--', 'thru': '--', 'R1': 70}
+{'R4': '--', 'total': 2, 'name': 'Luke List', 'R2': 70, 'R3': 72, 'strokes': 217, 'per_round': '--', 'thru': '--', 'R1': 75}
+{'R4': '--', 'total': 3, 'name': 'Scott Langley', 'R2': 73, 'R3': 76, 'strokes': 218, 'per_round': '--', 'thru': '--', 'R1': 69}
+{'R4': '--', 'total': 3, 'name': 'David Duval', 'R2': 75, 'R3': 72, 'strokes': 218, 'per_round': '--', 'thru': '--', 'R1': 71}
+{'R4': '--', 'total': 3, 'name': 'James Hahn', 'R2': 72, 'R3': 72, 'strokes': 218, 'per_round': '--', 'thru': '--', 'R1': 74}
+{'R4': '--', 'total': 3, 'name': 'Michael Thompson', 'R2': 72, 'R3': 71, 'strokes': 218, 'per_round': '--', 'thru': '--', 'R1': 75}
+{'R4': '--', 'total': 3, 'name': 'Chesson Hadley', 'R2': 77, 'R3': 73, 'strokes': 218, 'per_round': '--', 'thru': '--', 'R1': 68}
+{'R4': '--', 'total': 3, 'name': 'Brett Stegmaier', 'R2': 76, 'R3': 71, 'strokes': 218, 'per_round': '--', 'thru': '--', 'R1': 71}
+{'R4': '--', 'total': 3, 'name': 'Steve Stricker', 'R2': 71, 'R3': 75, 'strokes': 218, 'per_round': '--', 'thru': '--', 'R1': 72}
+{'R4': '--', 'total': 3, 'name': 'Chad Collins', 'R2': 74, 'R3': 71, 'strokes': 218, 'per_round': '--', 'thru': '--', 'R1': 73}
+{'R4': '--', 'total': 3, 'name': 'Nicholas Thompson', 'R2': 72, 'R3': 74, 'strokes': 218, 'per_round': '--', 'thru': '--', 'R1': 72}
+{'R4': '--', 'total': 3, 'name': 'Brendon Todd', 'R2': 71, 'R3': 76, 'strokes': 218, 'per_round': '--', 'thru': '--', 'R1': 71}
+{'R4': '--', 'total': 3, 'name': 'William McGirt', 'R2': 69, 'R3': 71, 'strokes': 218, 'per_round': '--', 'thru': '--', 'R1': 78}
+{'R4': '--', 'total': 4, 'name': 'Andres Gonzales', 'R2': 74, 'R3': 76, 'strokes': 219, 'per_round': '--', 'thru': '--', 'R1': 69}
+{'R4': '--', 'total': 4, 'name': 'Paul Dunne', 'R2': 76, 'R3': 76, 'strokes': 219, 'per_round': '--', 'thru': '--', 'R1': 67}
+{'R4': '--', 'total': 4, 'name': 'Russell Knox', 'R2': 74, 'R3': 74, 'strokes': 219, 'per_round': '--', 'thru': '--', 'R1': 71}
+{'R4': '--', 'total': 4, 'name': 'Russell Henley', 'R2': 77, 'R3': 73, 'strokes': 219, 'per_round': '--', 'thru': '--', 'R1': 69}
+{'R4': '--', 'total': 4, 'name': 'Tim Wilkinson', 'R2': 74, 'R3': 76, 'strokes': 219, 'per_round': '--', 'thru': '--', 'R1': 69}
+{'R4': '--', 'total': 4, 'name': 'Whee Kim', 'R2': 74, 'R3': 73, 'strokes': 219, 'per_round': '--', 'thru': '--', 'R1': 72}
+{'R4': '--', 'total': 4, 'name': 'Will MacKenzie', 'R2': 75, 'R3': 73, 'strokes': 219, 'per_round': '--', 'thru': '--', 'R1': 71}
+{'R4': '--', 'total': 4, 'name': 'Brian Davis', 'R2': 75, 'R3': 71, 'strokes': 219, 'per_round': '--', 'thru': '--', 'R1': 73}
+{'R4': '--', 'total': 5, 'name': 'Tim Herron', 'R2': 72, 'R3': 72, 'strokes': 220, 'per_round': '--', 'thru': '--', 'R1': 76}
+{'R4': '--', 'total': 5, 'name': 'Richard H. Lee', 'R2': 73, 'R3': 75, 'strokes': 220, 'per_round': '--', 'thru': '--', 'R1': 72}
+{'R4': '--', 'total': 5, 'name': 'Greg Owen', 'R2': 70, 'R3': 76, 'strokes': 220, 'per_round': '--', 'thru': '--', 'R1': 74}
+{'R4': '--', 'total': 5, 'name': 'Blake Adams', 'R2': 71, 'R3': 78, 'strokes': 220, 'per_round': '--', 'thru': '--', 'R1': 71}
+{'R4': '--', 'total': 5, 'name': 'David Toms', 'R2': 79, 'R3': 71, 'strokes': 220, 'per_round': '--', 'thru': '--', 'R1': 70}
+{'R4': '--', 'total': 5, 'name': 'David Lingmerth', 'R2': 76, 'R3': 72, 'strokes': 220, 'per_round': '--', 'thru': '--', 'R1': 72}
+{'R4': '--', 'total': 5, 'name': 'Rory Sabbatini', 'R2': 71, 'R3': 77, 'strokes': 220, 'per_round': '--', 'thru': '--', 'R1': 72}
+{'R4': '--', 'total': 5, 'name': 'Kevin Na', 'R2': 74, 'R3': 79, 'strokes': 220, 'per_round': '--', 'thru': '--', 'R1': 67}
+{'R4': '--', 'total': 6, 'name': 'K.J. Choi', 'R2': 71, 'R3': 73, 'strokes': 221, 'per_round': '--', 'thru': '--', 'R1': 77}
+{'R4': '--', 'total': 6, 'name': 'Daniel Summerhays', 'R2': 75, 'R3': 70, 'strokes': 221, 'per_round': '--', 'thru': '--', 'R1': 76}
+{'R4': '--', 'total': 6, 'name': 'Darron Stiles', 'R2': 73, 'R3': 76, 'strokes': 221, 'per_round': '--', 'thru': '--', 'R1': 72}
+{'R4': '--', 'total': 6, 'name': 'Greg Chalmers', 'R2': 73, 'R3': 80, 'strokes': 221, 'per_round': '--', 'thru': '--', 'R1': 68}
+{'R4': '--', 'total': 6, 'name': 'Bo Van Pelt', 'R2': 74, 'R3': 72, 'strokes': 221, 'per_round': '--', 'thru': '--', 'R1': 75}
+{'R4': '--', 'total': 7, 'name': 'Bryce Molder', 'R2': 76, 'R3': 75, 'strokes': 222, 'per_round': '--', 'thru': '--', 'R1': 71}
+{'R4': '--', 'total': 8, 'name': 'Brice Garnett', 'R2': 75, 'R3': 79, 'strokes': 223, 'per_round': '--', 'thru': '--', 'R1': 69}
+{'R4': '--', 'total': 8, 'name': 'Steve Wheatcroft', 'R2': 72, 'R3': 72, 'strokes': 223, 'per_round': '--', 'thru': '--', 'R1': 79}
+{'R4': '--', 'total': 9, 'name': 'Matt Bettencourt', 'R2': 73, 'R3': 74, 'strokes': 224, 'per_round': '--', 'thru': '--', 'R1': 77}
+{'R4': '--', 'total': 9, 'name': 'Rod Pampling', 'R2': 75, 'R3': 74, 'strokes': 224, 'per_round': '--', 'thru': '--', 'R1': 75}
+{'R4': '--', 'total': 9, 'name': 'Ryan Moore', 'R2': 74, 'R3': 77, 'strokes': 224, 'per_round': '--', 'thru': '--', 'R1': 73}
+{'R4': '--', 'total': 9, 'name': 'Charlie Beljan', 'R2': 71, 'R3': 77, 'strokes': 224, 'per_round': '--', 'thru': '--', 'R1': 76}
+{'R4': '--', 'total': 10, 'name': 'Ian Poulter', 'R2': 76, 'R3': 78, 'strokes': 225, 'per_round': '--', 'thru': '--', 'R1': 71}
+{'R4': '--', 'total': 10, 'name': 'Derek Ernst', 'R2': 77, 'R3': 76, 'strokes': 225, 'per_round': '--', 'thru': '--', 'R1': 72}
+{'R4': '--', 'total': 10, 'name': 'Robert Garrigus', 'R2': 78, 'R3': 75, 'strokes': 225, 'per_round': '--', 'thru': '--', 'R1': 72}
+{'R4': '--', 'total': 10, 'name': 'Ken Duke', 'R2': 74, 'R3': 73, 'strokes': 225, 'per_round': '--', 'thru': '--', 'R1': 78}
+{'R4': '--', 'total': 10, 'name': 'Ben Martin', 'R2': 76, 'R3': 74, 'strokes': 225, 'per_round': '--', 'thru': '--', 'R1': 75}
+{'R4': '--', 'total': 11, 'name': 'Michael Putnam', 'R2': 75, 'R3': 78, 'strokes': 226, 'per_round': '--', 'thru': '--', 'R1': 73}
+{'R4': '--', 'total': 11, 'name': 'Cameron Percy', 'R2': 73, 'R3': 77, 'strokes': 226, 'per_round': '--', 'thru': '--', 'R1': 76}
+{'R4': '--', 'total': 12, 'name': 'Abraham Ancer', 'R2': 76, 'R3': 77, 'strokes': 227, 'per_round': '--', 'thru': '--', 'R1': 74}
+{'R4': '--', 'total': 12, 'name': 'Vijay Singh', 'R2': 79, 'R3': 77, 'strokes': 227, 'per_round': '--', 'thru': '--', 'R1': 71}
+{'R4': '--', 'total': 12, 'name': 'Michael Bradley', 'R2': 75, 'R3': 73, 'strokes': 227, 'per_round': '--', 'thru': '--', 'R1': 79}
+{'R4': '--', 'total': 13, 'name': 'D.J. Trahan', 'R2': 76, 'R3': 72, 'strokes': 228, 'per_round': '--', 'thru': '--', 'R1': 80}
+{'R4': '--', 'total': 13, 'name': 'Lucas Lee', 'R2': 83, 'R3': 76, 'strokes': 228, 'per_round': '--', 'thru': '--', 'R1': 69}
+{'R4': '--', 'total': 17, 'name': 'Cameron Beckman', 'R2': 77, 'R3': 82, 'strokes': 232, 'per_round': '--', 'thru': '--', 'R1': 73}
+{'R4': '--', 'total': 17, 'name': 'Mike Weir', 'R2': 76, 'R3': 79, 'strokes': 232, 'per_round': '--', 'thru': '--', 'R1': 77}
+{'R4': '--', 'total': 20, 'name': 'D.H. Lee', 'R2': 72, 'R3': 83, 'strokes': 235, 'per_round': '--', 'thru': '--', 'R1': 80}
+{'R4': '--', 'total': 24, 'name': 'Jason Schmuhl', 'R2': 83, 'R3': 77, 'strokes': 239, 'per_round': '--', 'thru': '--', 'R1': 79}
+{'R4': '--', 'total': 33, 'name': 'Joe Affrunti', 'R2': 79, 'R3': 88, 'strokes': 248, 'per_round': '--', 'thru': '--', 'R1': 81}

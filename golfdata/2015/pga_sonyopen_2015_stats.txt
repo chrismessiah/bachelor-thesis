@@ -1,0 +1,149 @@
+{'name': 'Jan 18, Mon'}
+{'name': 'Jan 18, Mon'}
+{'name': 'ROUNDS'}
+{'name': 'ROUNDS'}
+{'name': '1'}
+{'R4': 62, 'name': 'Fabian Gomez', 'R2': 64, 'R3': 65, 'score': 260, 'R1': 69}
+{'R4': 66, 'name': 'Brandt Snedeker', 'R2': 65, 'R3': 66, 'score': 260, 'R1': 63}
+{'R4': 67, 'name': 'Zac Blair', 'R2': 65, 'R3': 64, 'score': 261, 'R1': 65}
+{'R4': 68, 'name': 'Si Woo Kim', 'R2': 67, 'R3': 65, 'score': 264, 'R1': 64}
+{'R4': 70, 'name': 'Kevin Kisner', 'R2': 66, 'R3': 66, 'score': 265, 'R1': 63}
+{'R4': 64, 'name': 'Greg Owen', 'R2': 65, 'R3': 67, 'score': 265, 'R1': 69}
+{'R4': 66, 'name': 'Graham DeLaet', 'R2': 62, 'R3': 65, 'score': 266, 'R1': 73}
+{'R4': 65, 'name': 'Jamie Lovemark', 'R2': 69, 'R3': 65, 'score': 266, 'R1': 67}
+{'R4': 68, 'name': 'Jason Dufner', 'R2': 67, 'R3': 65, 'score': 267, 'R1': 67}
+{'R4': 67, 'name': 'Zach Johnson', 'R2': 66, 'R3': 70, 'score': 267, 'R1': 64}
+{'R4': 67, 'name': 'Jerry Kelly', 'R2': 66, 'R3': 69, 'score': 267, 'R1': 65}
+{'R4': 67, 'name': 'Hudson Swafford', 'R2': 69, 'R3': 65, 'score': 267, 'R1': 66}
+{'R4': 68, 'name': 'Tim Clark', 'R2': 69, 'R3': 65, 'score': 268, 'R1': 66}
+{'R4': 65, 'name': 'Brian Harman', 'R2': 69, 'R3': 66, 'score': 268, 'R1': 68}
+{'R4': 65, 'name': 'Morgan Hoffmann', 'R2': 68, 'R3': 72, 'score': 268, 'R1': 63}
+{'R4': 68, 'name': 'Charles Howell III', 'R2': 69, 'R3': 67, 'score': 268, 'R1': 64}
+{'R4': 69, 'name': 'Matt Kuchar', 'R2': 66, 'R3': 62, 'score': 268, 'R1': 71}
+{'R4': 64, 'name': 'David Lingmerth', 'R2': 71, 'R3': 68, 'score': 268, 'R1': 65}
+{'R4': 66, 'name': 'William McGirt', 'R2': 65, 'R3': 68, 'score': 268, 'R1': 69}
+{'R4': 68, 'name': 'Ryan Palmer', 'R2': 67, 'R3': 67, 'score': 268, 'R1': 66}
+{'R4': 66, 'name': 'Scott Piercy', 'R2': 66, 'R3': 71, 'score': 268, 'R1': 65}
+{'R4': 69, 'name': 'Webb Simpson', 'R2': 67, 'R3': 65, 'score': 268, 'R1': 67}
+{'R4': 64, 'name': 'Kyle Stanley', 'R2': 66, 'R3': 70, 'score': 268, 'R1': 68}
+{'R4': 66, 'name': 'Daniel Summerhays', 'R2': 65, 'R3': 70, 'score': 268, 'R1': 67}
+{'R4': 65, 'name': 'Harold Varner III', 'R2': 68, 'R3': 66, 'score': 268, 'R1': 69}
+{'R4': 66, 'name': 'Jimmy Walker', 'R2': 68, 'R3': 65, 'score': 268, 'R1': 69}
+{'R4': 69, 'name': 'Gary Woodland', 'R2': 67, 'R3': 66, 'score': 268, 'R1': 66}
+{'R4': 68, 'name': 'Luke Donald', 'R2': 65, 'R3': 71, 'score': 269, 'R1': 65}
+{'R4': 67, 'name': 'James Hahn', 'R2': 65, 'R3': 70, 'score': 269, 'R1': 67}
+{'R4': 68, 'name': 'Marc Leishman', 'R2': 65, 'R3': 68, 'score': 269, 'R1': 68}
+{'R4': 68, 'name': 'Kevin Na', 'R2': 66, 'R3': 65, 'score': 269, 'R1': 70}
+{'R4': 65, 'name': 'Seung-Yul Noh', 'R2': 68, 'R3': 69, 'score': 269, 'R1': 67}
+{'R4': 67, 'name': 'Emiliano Grillo', 'R2': 67, 'R3': 69, 'score': 270, 'R1': 67}
+{'R4': 68, 'name': 'John Huh', 'R2': 67, 'R3': 65, 'score': 270, 'R1': 70}
+{'R4': 65, 'name': 'Brendon de Jonge', 'R2': 69, 'R3': 69, 'score': 270, 'R1': 67}
+{'R4': 69, 'name': 'Robert Garrigus', 'R2': 68, 'R3': 66, 'score': 270, 'R1': 67}
+{'R4': 71, 'name': 'Daisuke Kataoka', 'R2': 69, 'R3': 64, 'score': 270, 'R1': 66}
+{'R4': 70, 'name': 'Danny Lee', 'R2': 66, 'R3': 68, 'score': 270, 'R1': 66}
+{'R4': 70, 'name': 'Francesco Molinari', 'R2': 65, 'R3': 67, 'score': 270, 'R1': 68}
+{'R4': 71, 'name': 'Jeff Overton', 'R2': 65, 'R3': 64, 'score': 270, 'R1': 70}
+{'R4': 65, 'name': 'Kyle Reifers', 'R2': 68, 'R3': 68, 'score': 270, 'R1': 69}
+{'R4': 68, 'name': 'Daniel Berger', 'R2': 69, 'R3': 67, 'score': 271, 'R1': 67}
+{'R4': 69, 'name': 'Shane Bertsch', 'R2': 68, 'R3': 69, 'score': 271, 'R1': 65}
+{'R4': 66, 'name': 'Stewart Cink', 'R2': 67, 'R3': 69, 'score': 271, 'R1': 69}
+{'R4': 65, 'name': 'Fred Funk', 'R2': 70, 'R3': 71, 'score': 271, 'R1': 65}
+{'R4': 66, 'name': 'Nick Mason', 'R2': 69, 'R3': 68, 'score': 271, 'R1': 68}
+{'R4': 72, 'name': '"Sean O\\\\\'Hair"', 'R2': 66, 'R3': 68, 'score': 271, 'R1': 65}
+{'R4': 71, 'name': 'Chez Reavie', 'R2': 63, 'R3': 70, 'score': 271, 'R1': 67}
+{'R4': 68, 'name': 'John Senden', 'R2': 67, 'R3': 70, 'score': 271, 'R1': 66}
+{'R4': 69, 'name': 'Lucas Glover', 'R2': 70, 'R3': 67, 'score': 272, 'R1': 66}
+{'R4': 69, 'name': 'Ben Martin', 'R2': 66, 'R3': 67, 'score': 272, 'R1': 70}
+{'R4': 68, 'name': 'K.J. Choi', 'R2': 70, 'R3': 67, 'score': 272, 'R1': 67}
+{'R4': 67, 'name': 'Vijay Singh', 'R2': 69, 'R3': 73, 'score': 272, 'R1': 63}
+{'R4': 66, 'name': 'Shawn Stefani', 'R2': 67, 'R3': 72, 'score': 272, 'R1': 67}
+{'R4': 71, 'name': 'Tim Wilkinson', 'R2': 69, 'R3': 65, 'score': 272, 'R1': 67}
+{'R4': 69, 'name': 'Thomas Aiken', 'R2': 66, 'R3': 67, 'score': 273, 'R1': 71}
+{'R4': 72, 'name': 'Ricky Barnes', 'R2': 71, 'R3': 67, 'score': 273, 'R1': 63}
+{'R4': 70, 'name': 'Harris English', 'R2': 65, 'R3': 70, 'score': 273, 'R1': 68}
+{'R4': 70, 'name': 'Padraig Harrington', 'R2': 68, 'R3': 69, 'score': 273, 'R1': 66}
+{'R4': 68, 'name': 'Mark Hubbard', 'R2': 65, 'R3': 70, 'score': 273, 'R1': 70}
+{'R4': 68, 'name': 'Spencer Levin', 'R2': 70, 'R3': 68, 'score': 273, 'R1': 67}
+{'R4': 69, 'name': 'Adam Scott', 'R2': 68, 'R3': 68, 'score': 273, 'R1': 68}
+{'R4': 68, 'name': 'Michael Thompson', 'R2': 70, 'R3': 68, 'score': 273, 'R1': 67}
+{'R4': 71, 'name': 'Tony Fina', 'R2': 69, 'R3': 69, 'score': 274, 'R1': 65}
+{'R4': 72, 'name': 'Steve Stricker', 'R2': 65, 'R3': 68, 'score': 274, 'R1': 69}
+{'R4': 71, 'name': 'Tyrone Van Aswegen', 'R2': 69, 'R3': 66, 'score': 274, 'R1': 68}
+{'R4': 69, 'name': 'Chad Campbell', 'R2': 69, 'R3': 69, 'score': 275, 'R1': 68}
+{'R4': 69, 'name': 'Adam Hadwin', 'R2': 66, 'R3': 69, 'score': 275, 'R1': 71}
+{'R4': 72, 'name': 'Steve Wheatcroft', 'R2': 68, 'R3': 66, 'score': 275, 'R1': 69}
+{'R4': 70, 'name': 'Jason Gore', 'R2': 65, 'R3': 71, 'score': 276, 'R1': 70}
+{'R4': 70, 'name': 'J.J. Henry', 'R2': 68, 'R3': 69, 'score': 276, 'R1': 69}
+{'R4': 70, 'name': 'Yusaku Miyazato', 'R2': 67, 'R3': 70, 'score': 276, 'R1': 69}
+{'R4': 72, 'name': 'Hideto Tanihara', 'R2': 70, 'R3': 69, 'score': 277, 'R1': 66}
+{'R4': 75, 'name': 'Nick Taylor', 'R2': 68, 'R3': 67, 'score': 279, 'R1': 69}
+{'R4': '', 'name': 'Bronson Burgoon', 'R2': 70, 'R3': 70, 'score': 207, 'R1': 67}
+{'R4': '', 'name': 'David Hearn', 'R2': 71, 'R3': 71, 'score': 207, 'R1': 65}
+{'R4': '', 'name': 'Colt Knost', 'R2': 71, 'R3': 71, 'score': 207, 'R1': 65}
+{'R4': '', 'name': 'Davis Love III', 'R2': 70, 'R3': 71, 'score': 207, 'R1': 66}
+{'R4': '', 'name': 'Derek Fathauer', 'R2': 67, 'R3': 72, 'score': 208, 'R1': 69}
+{'R4': '', 'name': 'Peter Malnati', 'R2': 67, 'R3': 72, 'score': 208, 'R1': 69}
+{'R4': '', 'name': 'Satoshi Kodaira', 'R2': 67, 'R3': 74, 'score': 209, 'R1': 68}
+{'R4': '', 'name': 'Pat Perez', 'R2': 66, 'R3': 72, 'score': 209, 'R1': 71}
+{'R4': '', 'name': 'Cameron Smith', 'R2': 67, 'R3': 73, 'score': 209, 'R1': 69}
+{'R4': '', 'name': 'Jim Herman', 'R2': 69, 'R3': 73, 'score': 210, 'R1': 68}
+{'R4': '', 'name': 'Ryo Ishikawa', 'R2': 70, 'R3': 73, 'score': 210, 'R1': 67}
+{'R4': '', 'name': 'Whee Kim', 'R2': 69, 'R3': 73, 'score': 210, 'R1': 68}
+{'R4': '', 'name': 'Steven Bowditch', 'R2': 70, 'R3': 77, 'score': 213, 'R1': 66}
+{'R4': '', 'name': 'Erik Compton', 'R2': 69, 'R3': '', 'score': 138, 'R1': 69}
+{'R4': '', 'name': 'Sung Kang', 'R2': 70, 'R3': '', 'score': 138, 'R1': 68}
+{'R4': '', 'name': 'Patton Kizzire', 'R2': 70, 'R3': '', 'score': 138, 'R1': 68}
+{'R4': '', 'name': 'Russell Knox', 'R2': 65, 'R3': '', 'score': 138, 'R1': 73}
+{'R4': '', 'name': 'Hao Tong Li', 'R2': 69, 'R3': '', 'score': 138, 'R1': 69}
+{'R4': '', 'name': 'Luke List', 'R2': 68, 'R3': '', 'score': 138, 'R1': 70}
+{'R4': '', 'name': 'Johnson Wagner', 'R2': 71, 'R3': '', 'score': 138, 'R1': 67}
+{'R4': '', 'name': 'Boo Weekley', 'R2': 71, 'R3': '', 'score': 138, 'R1': 67}
+{'R4': '', 'name': 'Ben Crane', 'R2': 70, 'R3': '', 'score': 139, 'R1': 69}
+{'R4': '', 'name': 'Brian Gay', 'R2': 70, 'R3': '', 'score': 139, 'R1': 69}
+{'R4': '', 'name': 'Hyung-Sung Kim', 'R2': 67, 'R3': '', 'score': 139, 'R1': 72}
+{'R4': '', 'name': 'Michael Kim', 'R2': 65, 'R3': '', 'score': 139, 'R1': 74}
+{'R4': '', 'name': 'Chris Kirk', 'R2': 65, 'R3': '', 'score': 139, 'R1': 74}
+{'R4': '', 'name': 'Rory Sabbatini', 'R2': 71, 'R3': '', 'score': 139, 'R1': 68}
+{'R4': '', 'name': 'Scott Stallings', 'R2': 69, 'R3': '', 'score': 139, 'R1': 70}
+{'R4': '', 'name': 'Miguel Tabuena', 'R2': 68, 'R3': '', 'score': 139, 'R1': 71}
+{'R4': '', 'name': 'Blake Adams', 'R2': 69, 'R3': '', 'score': 140, 'R1': 71}
+{'R4': '', 'name': 'Tyler Aldridge', 'R2': 67, 'R3': '', 'score': 140, 'R1': 73}
+{'R4': '', 'name': 'Roberto Castro', 'R2': 71, 'R3': '', 'score': 140, 'R1': 69}
+{'R4': '', 'name': 'Alex Cejka', 'R2': 68, 'R3': '', 'score': 140, 'R1': 72}
+{'R4': '', 'name': 'Jon Curran', 'R2': 66, 'R3': '', 'score': 140, 'R1': 74}
+{'R4': '', 'name': 'Hiroshi Iwata', 'R2': 68, 'R3': '', 'score': 140, 'R1': 72}
+{'R4': '', 'name': 'Toshinori Muto', 'R2': 69, 'R3': '', 'score': 140, 'R1': 71}
+{'R4': '', 'name': 'Henrik Norlander', 'R2': 69, 'R3': '', 'score': 140, 'R1': 71}
+{'R4': '', 'name': 'Sam Saunders', 'R2': 68, 'R3': '', 'score': 140, 'R1': 72}
+{'R4': '', 'name': 'Robert Allenby', 'R2': 68, 'R3': '', 'score': 141, 'R1': 73}
+{'R4': '', 'name': 'Chad Collins', 'R2': 68, 'R3': '', 'score': 141, 'R1': 73}
+{'R4': '', 'name': 'D.H. Lee', 'R2': 73, 'R3': '', 'score': 141, 'R1': 68}
+{'R4': '', 'name': 'Parker McLachlin', 'R2': 70, 'R3': '', 'score': 141, 'R1': 71}
+{'R4': '', 'name': 'Scott Pinckney', 'R2': 66, 'R3': '', 'score': 141, 'R1': 75}
+{'R4': '', 'name': 'Brett Stegmaier', 'R2': 71, 'R3': '', 'score': 141, 'R1': 70}
+{'R4': '', 'name': 'Justin Thomas', 'R2': 71, 'R3': '', 'score': 141, 'R1': 70}
+{'R4': '', 'name': 'Dawie van der Walt', 'R2': 72, 'R3': '', 'score': 141, 'R1': 69}
+{'R4': '', 'name': 'Camilo Villegas', 'R2': 72, 'R3': '', 'score': 141, 'R1': 69}
+{'R4': '', 'name': 'Mark Wilson', 'R2': 69, 'R3': '', 'score': 141, 'R1': 72}
+{'R4': '', 'name': 'Stuart Appleby', 'R2': 70, 'R3': '', 'score': 142, 'R1': 72}
+{'R4': '', 'name': 'Keegan Bradley', 'R2': 70, 'R3': '', 'score': 142, 'R1': 72}
+{'R4': '', 'name': 'Tom Hoge', 'R2': 71, 'R3': '', 'score': 142, 'R1': 71}
+{'R4': '', 'name': 'Nick Killpack', 'R2': 70, 'R3': '', 'score': 142, 'R1': 72}
+{'R4': '', 'name': 'George McNeill', 'R2': 71, 'R3': '', 'score': 142, 'R1': 71}
+{'R4': '', 'name': 'Byron Meth', 'R2': 68, 'R3': '', 'score': 142, 'R1': 74}
+{'R4': '', 'name': 'Carl Pettersson', 'R2': 71, 'R3': '', 'score': 142, 'R1': 71}
+{'R4': '', 'name': 'Brendon Todd', 'R2': 70, 'R3': '', 'score': 142, 'R1': 72}
+{'R4': '', 'name': 'Russell Henley', 'R2': 74, 'R3': '', 'score': 143, 'R1': 69}
+{'R4': '', 'name': 'Graeme McDowell', 'R2': 73, 'R3': '', 'score': 143, 'R1': 70}
+{'R4': '', 'name': 'Carlos Ortiz', 'R2': 71, 'R3': '', 'score': 143, 'R1': 72}
+{'R4': '', 'name': 'Charlie Beljan', 'R2': 72, 'R3': '', 'score': 144, 'R1': 72}
+{'R4': '', 'name': 'Derek Ernst', 'R2': 73, 'R3': '', 'score': 144, 'R1': 71}
+{'R4': '', 'name': 'Will MacKenzie', 'R2': 67, 'R3': '', 'score': 144, 'R1': 77}
+{'R4': '', 'name': 'Miguel Angel Carballo', 'R2': 71, 'R3': '', 'score': 145, 'R1': 74}
+{'R4': '', 'name': 'Troy Merritt', 'R2': 72, 'R3': '', 'score': 145, 'R1': 73}
+{'R4': '', 'name': 'Rob Oppenheim', 'R2': 71, 'R3': '', 'score': 145, 'R1': 74}
+{'R4': '', 'name': 'Chris Stroud', 'R2': 73, 'R3': '', 'score': 145, 'R1': 72}
+{'R4': '', 'name': 'Jonas Blixt', 'R2': 75, 'R3': '', 'score': 146, 'R1': 71}
+{'R4': '', 'name': 'Shawn L', 'R2': 73, 'R3': '', 'score': 146, 'R1': 73}
+{'R4': '', 'name': 'Will Wilcox', 'R2': 75, 'R3': '', 'score': 149, 'R1': 74}
+{'R4': '', 'name': 'Garrett Okamura', 'R2': 79, 'R3': '', 'score': 153, 'R1': 74}

@@ -1,0 +1,37 @@
+{'name': 'Jan 11, Mon'}
+{'name': 'Jan 11, Mon'}
+{'name': 'ROUNDS'}
+{'name': 'ROUNDS'}
+{'name': '1'}
+{'R4': 67, 'name': 'Jordan Spieth', 'R2': 64, 'R3': 65, 'score': 262, 'R1': 66}
+{'R4': 69, 'name': 'Patrick Reed', 'R2': 69, 'R3': 67, 'score': 270, 'R1': 65}
+{'R4': 71, 'name': 'Brooks Koepka', 'R2': 68, 'R3': 63, 'score': 271, 'R1': 69}
+{'R4': 67, 'name': 'Brandt Snedeker', 'R2': 72, 'R3': 65, 'score': 271, 'R1': 67}
+{'R4': 67, 'name': 'Rickie Fowler', 'R2': 67, 'R3': 69, 'score': 272, 'R1': 69}
+{'R4': 67, 'name': 'Padraig Harrington', 'R2': 68, 'R3': 70, 'score': 275, 'R1': 70}
+{'R4': 71, 'name': 'Fabian Gomez', 'R2': 66, 'R3': 70, 'score': 275, 'R1': 68}
+{'R4': 69, 'name': 'Peter Malnati', 'R2': 66, 'R3': 69, 'score': 275, 'R1': 71}
+{'R4': 71, 'name': 'Kevin Kisner', 'R2': 65, 'R3': 71, 'score': 276, 'R1': 69}
+{'R4': 72, 'name': 'Steven Bowditch', 'R2': 67, 'R3': 69, 'score': 277, 'R1': 69}
+{'R4': 65, 'name': 'Jason Day', 'R2': 73, 'R3': 69, 'score': 277, 'R1': 70}
+{'R4': 69, 'name': 'Dustin Johnson', 'R2': 67, 'R3': 68, 'score': 277, 'R1': 73}
+{'R4': 72, 'name': 'Jimmy Walker', 'R2': 71, 'R3': 64, 'score': 277, 'R1': 70}
+{'R4': 67, 'name': 'Bubba Watson', 'R2': 68, 'R3': 73, 'score': 277, 'R1': 69}
+{'R4': 68, 'name': 'Smylie Kaufman', 'R2': 69, 'R3': 71, 'score': 278, 'R1': 70}
+{'R4': 72, 'name': 'Danny Lee', 'R2': 68, 'R3': 71, 'score': 278, 'R1': 67}
+{'R4': 70, 'name': 'David Lingmerth', 'R2': 71, 'R3': 66, 'score': 278, 'R1': 71}
+{'R4': 66, 'name': 'Emiliano Grillo', 'R2': 73, 'R3': 70, 'score': 280, 'R1': 71}
+{'R4': 70, 'name': 'Bill Haas', 'R2': 69, 'R3': 70, 'score': 280, 'R1': 71}
+{'R4': 67, 'name': 'Troy Merritt', 'R2': 68, 'R3': 70, 'score': 280, 'R1': 75}
+{'R4': 67, 'name': 'Zach Johnson', 'R2': 69, 'R3': 70, 'score': 281, 'R1': 75}
+{'R4': 68, 'name': 'Alex Cejka', 'R2': 72, 'R3': 69, 'score': 281, 'R1': 72}
+{'R4': 69, 'name': 'Justin Thomas', 'R2': 73, 'R3': 69, 'score': 281, 'R1': 70}
+{'R4': 72, 'name': 'J.B. Holmes', 'R2': 76, 'R3': 68, 'score': 283, 'R1': 67}
+{'R4': 72, 'name': 'Chris Kirk', 'R2': 71, 'R3': 70, 'score': 283, 'R1': 70}
+{'R4': 71, 'name': 'Scott Piercy', 'R2': 69, 'R3': 72, 'score': 283, 'R1': 71}
+{'R4': 72, 'name': 'Russell Knox', 'R2': 72, 'R3': 69, 'score': 284, 'R1': 71}
+{'R4': 71, 'name': 'Matt Every', 'R2': 68, 'R3': 78, 'score': 287, 'R1': 70}
+{'R4': 70, 'name': 'Davis Love III', 'R2': 72, 'R3': 71, 'score': 288, 'R1': 75}
+{'R4': 71, 'name': 'Graeme McDowell', 'R2': 70, 'R3': 72, 'score': 288, 'R1': 75}
+{'R4': 69, 'name': 'James Hahn', 'R2': 76, 'R3': 74, 'score': 295, 'R1': 76}
+{'R4': 71, 'name': 'J.J. Henry', 'R2': 74, 'R3': 73, 'score': 295, 'R1': 77}

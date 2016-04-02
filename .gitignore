@@ -4,3 +4,7 @@ env/*
 *.sublime-workspace
 tweepy/*
 golfdata/*_files
+golfdata/files
+golfdata/html
+golfdata/2015/files
+golfdata/2015/html
