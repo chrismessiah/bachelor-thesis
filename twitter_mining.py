@@ -86,30 +86,34 @@ def score_tweets(tweets):
     return tweets
 
 def wait_fifteen():
-    print("RateLimitError, waiting for 15 minutes and trying again")
-    for i in range(1,16):
+    print("RateLimitError, waiting for 16 minutes and trying again")
+    for i in range(1,17):
         time.sleep(60) #Wait 15 minutes and try again (should this be shorter?)
         print(i, " minutes waited")
     print("Retrying!")
-nisse = 0
+
 def run(tweeter_id):
     """Gets two rounds of twitter user_ids, should be changed so it runs until 
     selected date is hit (if available) """
-    global nisse
+    print("Getting tweets for ID: ", tweeter_id)
     try:
-        #raise RateLimitError("FAKE")
         tweets, last_id = get_tweets(tweeter_id) # Get tweets via twitter API
         result = score_tweets(tweets)
+
     except RateLimitError:
         wait_fifteen()
-        run(tweeter_id)
+        tweets, last_id = get_tweets(tweeter_id)
+        result = score_tweets(tweets)
+        #run(tweeter_id)
 
     try:    
         tweets, last_id = get_tweets(tweeter_id, last_id)
         result_2 = score_tweets(tweets)
     except RateLimitError:
         wait_fifteen()
-        run(tweeter_id)
+        tweets, last_id = get_tweets(tweeter_id, last_id)
+        result_2 = score_tweets(tweets)
+        #run(tweeter_id)
 
     two_results = result + result_2
 
@@ -124,6 +128,11 @@ def get_golfers():
     api = API(auth)
     
     golfers = api.friends_ids(screen_name = "golfjobb")
+    #with open("golferID.txt", "w") as f:
+    #    for items in golfers:
+    #        f.write(str(items))
+    #        f.write("\n")
+
     print("GOlfers: ", golfers)
     return golfers
 
