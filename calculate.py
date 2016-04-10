@@ -123,7 +123,7 @@ def make_z_scores(stat_objects):
         except KeyError:
             pass
         except ValueError:
-            print(items["name"], "'s score:", items["score"], "invalid")
+            #print(items["name"], "'s score:", items["score"], "invalid")
             scores.append(0)
 
     scores = np.array(scores)
@@ -145,6 +145,24 @@ def calc_zscore(x, mean, std):
     z = (x - mean) / std 
     return z
 
+def make_individual_stats(competions):
+    # name: [stat_aray]
+    player_stats = {}
+    for competition in competitions:
+        for player in competition["player_stats"]:
+            try:
+                print(player["z-score"])
+                if player["name"] not in player_stats:
+                    player_stats[ player["name"] ] = [ player["z-score"] ]
+                else:
+                    player_stats[ player["name"] ].append(player["z-score"])
+            except KeyError:
+                print("KeyError, no z-score for player")
+                print(player)
+
+    return player_stats
+
+
 if __name__ == '__main__':
     #tweets = get_tweets_from_file("golfersRun27mars.txt")
     #avg = tweet_interval_avg(datetime.datetime.strptime("2015-06-01" ,"%Y-%m-%d"), 3, tweets)
@@ -152,7 +170,7 @@ if __name__ == '__main__':
     #print(tweets_per_golfer(tweets))
     competitions = create_competition_stat_object()
     for competition in competitions:
-        print("Getting stats for", competition["name"])
+        #print("Getting stats for", competition["name"])
         stat_objects = get_stats_from_file("golfdata/2015/" + competition["name"] + "_stats.txt")
         player_stats, mean, z_mean = make_z_scores(stat_objects)
 
@@ -160,5 +178,34 @@ if __name__ == '__main__':
         competition["mean"] = mean
         competition["z-mean"] = z_mean
 
-    #print(competitions)
+    for competition in competitions:
+        #print(competition["mean"])
+        with open("competition_stats.csv", "a") as f:
+            f.write(competition["name"])
+            f.write(",")
+            f.write(str(competition["mean"]))
+            f.write(",")
+            f.write(str(competition["z-mean"]))
+            f.write(",")
+            f.write("\n")
+
+    player_stats = make_individual_stats(competitions)
+
+    for name, score in player_stats.iteritems():
+        score = np.array(score)
+        mean = np.mean(score)
+        with open("zscores_2015.csv", "a") as f:
+            # Delt
+            if len(score) > 10:
+                f.write(str(name))
+                f.write(",")
+                f.write(str(mean))
+                f.write(",")
+                f.write(str(len(score)))
+                f.write(",")
+                f.write("\n")
+
+
+
+
 
