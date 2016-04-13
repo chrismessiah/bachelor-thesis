@@ -19,19 +19,22 @@ def tweet_interval_avg(dateObj, num_days, tweet_objects):
     Example dateOjb: dateObj = datetime.datetime.strptime("2015-06-01 00:00:00", "%Y-%m-%d %H:%M:%S") """
 
     span = datetime.timedelta(days= num_days).total_seconds()
-    print("SPAN: ", datetime.timedelta(days= num_days), 
-        "Seconds:", datetime.timedelta(days= num_days).total_seconds())
+    #print("SPAN: ", datetime.timedelta(days= num_days), 
+    #    "Seconds:", datetime.timedelta(days= num_days).total_seconds())
 
     total_score = 0
     hits = 0
     for items in tweet_objects:
         #print((items["date"] - dateObj))
         if (abs(items["date"] - dateObj).total_seconds()) < span:
-            print("Hit within span, score: ", items["score"])
+            #print("Hit within span, score: ", items["score"])
             total_score += items["score"]
             hits += 1
 
-    return total_score / hits
+    if hits == 0:
+        return None
+    else: 
+        return total_score / hits
 
 def tweets_per_golfer(tweets):
     golf_list = []
@@ -57,7 +60,7 @@ def get_stats_from_file(filename):
     return stat_objects
 
 def create_competition_stat_object():
-    """Makes a golfcompetition object"""
+    """Makes a golfcompetition object, should be moved to a static file but whatevs"""
 
     pga_northerntrust_2015 = {"name": "pga_northerntrust_2015", "date": ["2015-02-16", "2015-02-22"]}
     pga_ohlclassic_2015 = {"name": "pga_ohlclassic_2015", "date": ["2014-11-10", "2014-11-16"]}
@@ -139,7 +142,7 @@ def make_z_scores(stat_objects):
 
     z_mean = np.mean(np.array(z_scores))
 
-    return stat_objects, mean, z_mean
+    return stat_objects, mean, z_mean, std
 
 def calc_zscore(x, mean, std):
     z = (x - mean) / std 
@@ -156,8 +159,8 @@ def make_individual_stats(competitions):
                 else:
                     player_stats[ player["name"] ].append(player["z-score"])
             except KeyError:
-                print("KeyError, no z-score for player in ", competition["name"])
-                print(player)
+                pass#print("KeyError, no z-score for player in ", competition["name"])
+                #print(player)
 
     return player_stats
 
@@ -166,48 +169,152 @@ def make_competition_stats(write = False):
     for competition in competitions:
         #print("Getting stats for", competition["name"])
         stat_objects = get_stats_from_file("golfdata/2015/" + competition["name"] + "_stats.txt")
-        player_stats, mean, z_mean = make_z_scores(stat_objects)
+        player_stats, mean, z_mean, std = make_z_scores(stat_objects)
 
         competition["player_stats"] = player_stats
         competition["mean"] = mean
         competition["z-mean"] = z_mean
+        competition["std"] = std
 
-    for competition in competitions:
-        #print(competition["mean"])
-        if write:
-            with open("competition_stats.csv", "a") as f:
-                f.write(competition["name"])
-                f.write(",")
-                f.write(str(competition["mean"]))
-                f.write(",")
-                f.write(str(competition["z-mean"]))
-                f.write(",")
-                f.write("\n")
-
-    player_stats = make_individual_stats(competitions)
-
-
-
-    for name, score in player_stats.iteritems():
-        score = np.array(score)
-        mean = np.mean(score)
-
-        if write:
-            with open("zscores_2015.csv", "a") as f:
-                # Delt
-                if len(score) > 10:
-                    f.write(str(name))
+    with open("competition_stats.csv", "w") as f:
+        for competition in competitions:
+            if write:
+                    f.write(competition["name"])
                     f.write(",")
-                    f.write(str(mean))
+                    f.write(str(competition["mean"]))
                     f.write(",")
-                    f.write(str(len(score)))
+                    f.write(str(competition["z-mean"]))
+                    f.write(",")
+                    f.write(str(competition["std"]))
                     f.write(",")
                     f.write("\n")
 
-    return player_stats, competitions
+    player_stats = make_individual_stats(competitions)
+    with open("zscores_2015.csv", "w") as f:
+        for name, score in player_stats.iteritems():
+                score = np.array(score)
+                mean = np.mean(score)
+                if write:
+                    if len(score) > 10:
+                        f.write(str(name))
+                        f.write(",")
+                        f.write(str(mean))
+                        f.write(",")
+                        f.write(str(len(score)))
+                        f.write(",")
+                        f.write("\n")
 
-def check_performance_vs_tweets(tweets, competitions, player_stats):
-    print(competitions[0]["name"])
+    return player_stats, competitions
+def error_handler(name, golfer_id):
+    """A stupid function to handle stupid errors (Jokesters with non-realnames a real_name on twitter)"""
+    if name == "cameron percy":
+        return sum(player_stats["Cameron Percy"]) / len(player_stats["Cameron Percy"])
+    elif int(golfer_id) == 387448282:
+        return sum(player_stats["Steve Flesch"]) / len(player_stats["Steve Flesch"])
+    elif int(golfer_id) == 534842435:
+        return sum(player_stats["Phil Mickelson"]) / len(player_stats["Phil Mickelson"])
+    elif int(golfer_id) == 2575022059:
+        return sum(player_stats["Mike Weir"]) / len(player_stats["Mike Weir"])
+    elif int(golfer_id) == 2980287125:
+        return sum(player_stats["Fabian Gomez"]) / len(player_stats["Fabian Gomez"])    
+    elif int(golfer_id) == 2586530467:
+        return sum(player_stats["Matt Jones"]) / len(player_stats["Matt Jones"])    
+    elif int(golfer_id) == 37843534:
+        return sum(player_stats["J.J. Henry"]) / len(player_stats["J.J. Henry"])    
+    elif int(golfer_id) == 72758634:
+        print("No official stats for Y.E. Yang (same on PGA Tour.com as far as I can tell)")
+        return None    
+    elif int(golfer_id) == 74791999:
+        return sum(player_stats["Bubba Watson"]) / len(player_stats["Bubba Watson"])    
+    elif int(golfer_id) == 174596509:
+        return sum(player_stats["Sangmoon Bae"]) / len(player_stats["Sangmoon Bae"])        
+    elif int(golfer_id) == 180081562:
+        return sum(player_stats["Seung-Yul Noh"]) / len(player_stats["Seung-Yul Noh"])         
+    elif int(golfer_id) == 188039706:
+        return sum(player_stats["Rory McIlroy"]) / len(player_stats["Rory McIlroy"])         
+    elif int(golfer_id) == 244768359:
+        return sum(player_stats["Adam Hadwin"]) / len(player_stats["Adam Hadwin"])       
+    elif int(golfer_id) == 283052420:
+        return sum(player_stats["Michael Putnam"]) / len(player_stats["Michael Putnam"])       
+    elif int(golfer_id) == 306549170:
+        return sum(player_stats["Chris Stroud"]) / len(player_stats["Chris Stroud"])       
+    elif int(golfer_id) == 342791510:
+        return sum(player_stats["Max Homa"]) / len(player_stats["Max Homa"])       
+    elif int(golfer_id) == 373511205:
+        return sum(player_stats["Marc Leishman"]) / len(player_stats["Marc Leishman"])       
+    elif int(golfer_id) == 382202772:
+        return sum(player_stats["Michael Kim"]) / len(player_stats["Michael Kim"])       
+    elif int(golfer_id) == 558220594:
+        return sum(player_stats["Will MacKenzie"]) / len(player_stats["Will MacKenzie"])       
+    elif int(golfer_id) == 1138456724:
+        return sum(player_stats["Jason Kokrak"]) / len(player_stats["Jason Kokrak"])       
+    elif int(golfer_id) == 1924882021:
+        return sum(player_stats["Andrew Svoboda"]) / len(player_stats["Andrew Svoboda"])       
+    elif int(golfer_id) == 2790755710:
+        return sum(player_stats["Tony Fina"]) / len(player_stats["Tony Fina"])       
+    elif int(golfer_id) == 174780495:
+        print("No official stats for Thorbjorn Olesen (same on PGA Tour.com as far as I can tell)")  
+        return None    
+    elif int(golfer_id) == 1152096636:
+        print("No official stats for DJ Trahan found")  
+        return None    
+    else:
+        raise KeyError(name + " ID: " + golfer_id)
+
+def check_performance_vs_tweets(tweets, competitions, player_stats, write = False):
+    #print(player_stats)
+    with open("golferID.txt") as f:
+        golferIDs = f.read().splitlines()
+    data_pairs = []
+    #TODO: Make into a loop for all golfers! 
+    for golfer in golferIDs:
+        golfer_tweets = []
+        golfer_afinnscore = []
+        for tweet in tweets:
+            if int(golfer) == tweet["user_id"]:
+                golfer_tweets.append(tweet)
+                golfer_afinnscore.append(tweet["score"])
+
+        golfer_name = golfer_tweets[0]["realname"]
+        golfer_afinn_mean = np.mean(np.array(golfer_afinnscore)) #Get golfer AFINN average
+
+        #Get golfer average score:
+        try:
+            golfer_mean_z = sum(player_stats[golfer_name]) / len(player_stats[golfer_name])
+        except KeyError:
+            golfer_mean_z = error_handler(golfer_name, golfer)
+
+        #print(golfer_name, "AfinnMean: ", golfer_afinn_mean, "Z-mean: ", golfer_mean_z)
+
+        for competition in competitions:
+            """ Get golfers relative Afinn score """
+            date = datetime.datetime.strptime(competition["date"][0], "%Y-%m-%d") # 0 is start date, 1 is end date
+            interval_avg = tweet_interval_avg(date, 3, golfer_tweets)
+            if interval_avg != None:
+                afinn_diff = interval_avg - golfer_afinn_mean #VARIABLE
+            else: 
+                afinn_diff = None
+            """ Get golfers Z-score for competition"""
+            for stat in competition["player_stats"]:
+                try: 
+                    if stat["name"] == golfer_name:
+                        score_diff = stat["z-score"] - golfer_mean_z
+                except KeyError:
+                    print("ERROR! No Z-score found for:", stat," in ", competition["name"])
+            if afinn_diff != None:
+                data_pairs.append([afinn_diff, score_diff])
+
+    if write:
+        with open("data_pairs_A.txt", "w") as f:
+            for items in data_pairs:
+                f.write(str(items[0]))
+                f.write(",")
+                f.write(str(items[1]))
+                f.write(",")
+                f.write("\n")
+    #for items in data_pairs:
+    #    print(items)
+    return data_pairs
 
 if __name__ == '__main__':
     #avg = tweet_interval_avg(datetime.datetime.strptime("2015-06-01" ,"%Y-%m-%d"), 3, tweets)
@@ -217,9 +324,10 @@ if __name__ == '__main__':
 
     #WE NEED SOME STRING CLEANING HERE AT SOME POINT!
     tweets = get_tweets_from_file("resultsFile.txt")
-    player_stats, competitions = make_competition_stats()
+    player_stats, competitions = make_competition_stats(write = False)
 
-    check_performance_vs_tweets(tweets, competitions, player_stats)
+    check_performance_vs_tweets(tweets, competitions, player_stats, write = False)
+
 
 
 
