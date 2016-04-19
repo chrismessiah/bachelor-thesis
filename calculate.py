@@ -180,17 +180,22 @@ def clean_stat_object(stat_objects):
 
 def correct_round_data(stat_objects):
     for golfer_data in stat_objects:
-        if not(str(golfer_data["R2"]).isdigit()):
+        if not(str(golfer_data["R2"]).isdigit()): # Missed 3 rounds
             golfer_data["R2"] = golfer_data["R1"]
             golfer_data["R3"] = golfer_data["R1"]
             golfer_data["R4"] = golfer_data["R1"]
-        if not(str(golfer_data["R3"]).isdigit()):
+        elif not(str(golfer_data["R3"]).isdigit()): # Missed 2 rounds
             mean = int(round(np.mean([golfer_data["R1"], golfer_data["R2"]])))
             golfer_data["R3"] = mean
             golfer_data["R4"] = mean
-        if not(str(golfer_data["R4"]).isdigit()):
+        elif not(str(golfer_data["R4"]).isdigit()): # Missed 1 rounds
             mean = int(round(np.mean([golfer_data["R1"], golfer_data["R2"], golfer_data["R3"]])))
             golfer_data["R4"] = mean
+        else: # Finished
+            pass
+            #print(golfer_data)
+        golfer_data["score"] = golfer_data["R1"] + golfer_data["R2"] + golfer_data["R3"] + golfer_data["R4"]
+        #print(golfer_data)
     return stat_objects
 
 def make_competition_stats(write = False):
