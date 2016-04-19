@@ -135,7 +135,6 @@ def make_z_scores(stat_objects):
 
     z_scores = []
 
-    print(stat_objects)
     for i, score in enumerate(scores):
         z = calc_zscore(score, mean, std)
         z_scores.append(z)
@@ -147,7 +146,7 @@ def make_z_scores(stat_objects):
 
 def calc_zscore(x, mean, std):
     z = (x - mean) / std
-    print("x",x,"mean", mean, "std", std, "z", z)
+    # print("x",x,"mean", mean, "std", std, "z", z)
     return z
 
 def make_individual_stats(competitions):
@@ -166,11 +165,41 @@ def make_individual_stats(competitions):
 
     return player_stats
 
+# makes sure all golfers have participated on R1
+def clean_stat_object(stat_objects):
+    new_stat_objects = []
+    for stat in stat_objects:
+        try:
+            int(stat["R1"]) # throw error if bad value
+            new_stat_objects.append(stat) # append if good value
+        except KeyError:
+            pass # {'name': 'ROUNDS'}
+        except ValueError:
+            pass # {'R4': '', 'R1': '', 'R2': '', 'R3': '', 'score': '', 'name': 'Erik Compton'}
+    return new_stat_objects
+
+def correct_round_data(stat_objects):
+    for golfer_data in stat_objects:
+        if not(str(golfer_data["R2"]).isdigit()):
+            golfer_data["R2"] = golfer_data["R1"]
+            golfer_data["R3"] = golfer_data["R1"]
+            golfer_data["R4"] = golfer_data["R1"]
+        if not(str(golfer_data["R3"]).isdigit()):
+            mean = int(round(np.mean([golfer_data["R1"], golfer_data["R2"]])))
+            golfer_data["R3"] = mean
+            golfer_data["R4"] = mean
+        if not(str(golfer_data["R4"]).isdigit()):
+            mean = int(round(np.mean([golfer_data["R1"], golfer_data["R2"], golfer_data["R3"]])))
+            golfer_data["R4"] = mean
+    return stat_objects
+
 def make_competition_stats(write = False):
     competitions = create_competition_stat_object()
     for competition in competitions:
         #print("Getting stats for", competition["name"])
         stat_objects = get_stats_from_file("golfdata/2015/" + competition["name"] + "_stats.txt")
+        stat_objects = clean_stat_object(stat_objects)
+        stat_objects = correct_round_data(stat_objects)
         player_stats, mean, z_mean, std = make_z_scores(stat_objects)
 
         competition["player_stats"] = player_stats
