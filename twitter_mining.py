@@ -96,29 +96,45 @@ def run(tweeter_id):
     """Gets two rounds of twitter user_ids, should be changed so it runs until 
     selected date is hit (if available) """
     print("Getting tweets for ID: ", tweeter_id)
-    try:
-        tweets, last_id = get_tweets(tweeter_id) # Get tweets via twitter API
-        result = score_tweets(tweets)
+    last_id = None
+    alltweets = []
+    for i in xrange(5):
+        try:
+            if last_id == None:
+                tweets, last_id = get_tweets(tweeter_id) # Get tweets via twitter API
+            else:
+                tweets, last_id = get_tweets(tweeter_id, last_id)
+            result = score_tweets(tweets)
+            print("Request" + str(i) + " ", len(tweets))
+            alltweets = alltweets + result
 
-    except RateLimitError:
-        wait_fifteen()
-        tweets, last_id = get_tweets(tweeter_id)
-        result = score_tweets(tweets)
-        #run(tweeter_id)
+        except RateLimitError:
+            wait_fifteen()
+            if last_id == None:
+                tweets, last_id = get_tweets(tweeter_id) # Get tweets via twitter API
+            else:
+                tweets, last_id = get_tweets(tweeter_id, last_id)
+            result = score_tweets(tweets)
+            print("Request" + str(i) + " ", len(tweets))
+            alltweets = alltweets + result
+            #run(tweeter_id)
 
-    try:    
-        tweets, last_id = get_tweets(tweeter_id, last_id)
-        result_2 = score_tweets(tweets)
-    except RateLimitError:
-        wait_fifteen()
-        tweets, last_id = get_tweets(tweeter_id, last_id)
-        result_2 = score_tweets(tweets)
-        #run(tweeter_id)
+        except IndexError:
+            return None
+        """
+        try:    
+            tweets, last_id = get_tweets(tweeter_id, last_id)
+            result_2 = score_tweets(tweets)
+            print("Request2 ", len(tweets))
+        except RateLimitError:
+            wait_fifteen()
+            tweets, last_id = get_tweets(tweeter_id, last_id)
+            result_2 = score_tweets(tweets)
+            #run(tweeter_id)
+        """
 
-    two_results = result + result_2
-
-    with open("resultsFile.txt", "a") as f:
-        for items in two_results:
+    with open("testNewResultsFile.txt", "a") as f:
+        for items in alltweets:
             f.write(str(items))
             f.write("\n")
 
@@ -143,7 +159,7 @@ if __name__ == '__main__':
         try:
             run(golfer_id)
         except TweepError:
-            with open("resultsFile.txt", "a") as f:
+            with open("testNewResultsFile.txt", "a") as f:
                 f.write("TweepError detected when processing: " +  str(golfer_id))
                 f.write("\n")
 
