@@ -1,0 +1,9 @@
+TweepError detected when processing: 191413848
+TweepError detected when processing: 239893780
+TweepError detected when processing: 74791999
+TweepError detected when processing: 113712551
+TweepError detected when processing: 158216799
+TweepError detected when processing: 281592835
+TweepError detected when processing: 549697500
+TweepError detected when processing: 819954614
+TweepError detected when processing: 1152776161

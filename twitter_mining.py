@@ -123,7 +123,6 @@ def run(tweeter_id, output_filename):
             result = score_tweets(tweets)
             print("Request" + str(i) + " ", len(tweets))
             alltweets = alltweets + result
-            #run(tweeter_id)
 
         except IndexError:
             print("IndexError")
@@ -139,70 +138,7 @@ def get_golfers():
     auth = OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
     api = API(auth)
-
-    #golfers = api.friends_ids(screen_name = "golfjobb")
-    golfers = [43334612,
-    224395974,
-    365659638,
-    608085042,
-    832245307,
-    1406435672,
-    2575022059,
-    2586530467,
-    2795249566,
-    15668931,
-    31630805,
-    32453930,
-    55247998,
-    62130152,
-    103691667,
-    119754291,
-    155858930,
-    171065186,
-    174596509,
-    179205995,
-    184995243,
-    212795923,
-    235180756,
-    284814482,
-    300011126,
-    317245257,
-    373511205,
-    382202772,
-    386007220,
-    404865489,
-    431158121,
-    431333874,
-    538169429,
-    558220594,
-    603055123,
-    819954614,
-    842960749,
-    995830002,
-    1138456724,
-    1152096636,
-    1152776161,
-    1308077142,
-    1493901511,
-    1553899147,
-    1596541134,
-    1924882021,
-    2253890264,
-    2271120397,
-    2575555092,
-    2790755710,
-    2852157224,
-    2856052017,
-    3028563436
-    ]
-
-
-    #with open("golferID.txt", "w") as f:
-    #    for items in golfers:
-    #        f.write(str(items))
-    #        f.write("\n")
-
-    print("GOlfers: ", golfers)
+    golfers = api.friends_ids(screen_name = "golfjobb")
     return golfers
 
 if __name__ == '__main__':
