@@ -92,7 +92,7 @@ def wait_fifteen():
         print(i, " minutes waited")
     print("Retrying!")
 
-def run(tweeter_id):
+def run(tweeter_id, output_filename):
     """Gets two rounds of twitter user_ids, should be changed so it runs until
     selected date is hit (if available) """
     print("Getting tweets for ID: ", tweeter_id)
@@ -102,6 +102,9 @@ def run(tweeter_id):
         try:
             if last_id == None:
                 tweets, last_id = get_tweets(tweeter_id) # Get tweets via twitter API
+            elif last_id == 0 or i == 4:
+                output_tweets(alltweets, output_filename)
+                break
             else:
                 tweets, last_id = get_tweets(tweeter_id, last_id)
             result = score_tweets(tweets)
@@ -112,6 +115,9 @@ def run(tweeter_id):
             wait_fifteen()
             if last_id == None:
                 tweets, last_id = get_tweets(tweeter_id) # Get tweets via twitter API
+            elif last_id == 0 or i == 4:
+                output_tweets(alltweets, output_filename)
+                break
             else:
                 tweets, last_id = get_tweets(tweeter_id, last_id)
             result = score_tweets(tweets)
@@ -120,20 +126,11 @@ def run(tweeter_id):
             #run(tweeter_id)
 
         except IndexError:
+            print("IndexError")
             return None
-        """
-        try:
-            tweets, last_id = get_tweets(tweeter_id, last_id)
-            result_2 = score_tweets(tweets)
-            print("Request2 ", len(tweets))
-        except RateLimitError:
-            wait_fifteen()
-            tweets, last_id = get_tweets(tweeter_id, last_id)
-            result_2 = score_tweets(tweets)
-            #run(tweeter_id)
-        """
 
-    with open("testNewResultsFile.txt", "a") as f:
+def output_tweets(alltweets, output_filename):
+    with open(output_filename, "a") as f:
         for items in alltweets:
             f.write(str(items))
             f.write("\n")
@@ -143,7 +140,63 @@ def get_golfers():
     auth.set_access_token(access_token, access_token_secret)
     api = API(auth)
 
-    golfers = api.friends_ids(screen_name = "golfjobb")
+    #golfers = api.friends_ids(screen_name = "golfjobb")
+    golfers = [43334612,
+    224395974,
+    365659638,
+    608085042,
+    832245307,
+    1406435672,
+    2575022059,
+    2586530467,
+    2795249566,
+    15668931,
+    31630805,
+    32453930,
+    55247998,
+    62130152,
+    103691667,
+    119754291,
+    155858930,
+    171065186,
+    174596509,
+    179205995,
+    184995243,
+    212795923,
+    235180756,
+    284814482,
+    300011126,
+    317245257,
+    373511205,
+    382202772,
+    386007220,
+    404865489,
+    431158121,
+    431333874,
+    538169429,
+    558220594,
+    603055123,
+    819954614,
+    842960749,
+    995830002,
+    1138456724,
+    1152096636,
+    1152776161,
+    1308077142,
+    1493901511,
+    1553899147,
+    1596541134,
+    1924882021,
+    2253890264,
+    2271120397,
+    2575555092,
+    2790755710,
+    2852157224,
+    2856052017,
+    3028563436
+    ]
+
+
     #with open("golferID.txt", "w") as f:
     #    for items in golfers:
     #        f.write(str(items))
@@ -153,12 +206,13 @@ def get_golfers():
     return golfers
 
 if __name__ == '__main__':
+    output_filename = "output2.txt"
+    error_filename = "errors2.txt"
     golfers = get_golfers()
-
     for golfer_id in tqdm(golfers):
         try:
-            run(golfer_id)
+            run(golfer_id, output_filename)
         except TweepError:
-            with open("outputChris21Apr.txt", "a") as f:
+            with open(error_filename, "a") as f:
                 f.write("TweepError detected when processing: " +  str(golfer_id))
                 f.write("\n")
