@@ -353,9 +353,10 @@ def check_performance_vs_tweets(tweets, competitions, player_stats, write = Fals
             for competition in competitions:
                 """ Get golfers relative Afinn score """
                 date = datetime.datetime.strptime(competition["date"][0], "%Y-%m-%d") # 0 is start date, 1 is end date
-                interval_avg = tweet_interval_avg(date, 3, golfer_tweets)
+                interval_avg = tweet_interval_avg(date, 5, golfer_tweets)
                 if interval_avg != None:
-                    afinn_diff = interval_avg - golfer_afinn_mean #VARIABLE
+                    afinn_diff = interval_avg - golfer_afinn_mean # relative
+                    #afinn_diff = interval_avg                     # absolute
                 else:
                     afinn_diff = None
                 """ Get golfers Z-score for competition"""
@@ -371,7 +372,8 @@ def check_performance_vs_tweets(tweets, competitions, player_stats, write = Fals
             print("Error on golferID ",golfer)
 
     if write:
-        with open("3dagarinnantavling_relativeAfinn.csv", "w") as f:
+        with open("official_runs/1dagarinnantavling_relativeAfinn.csv", "w") as f:
+        #with open("official_runs/5dagarinnantavling_absolutAfinn.csv", "w") as f:
             for items in data_pairs:
                 f.write(str(items[0]))
                 f.write(",")
@@ -389,7 +391,7 @@ if __name__ == '__main__':
     #make_competition_stats()
 
     #WE NEED SOME STRING CLEANING HERE AT SOME POINT!
-    tweets = get_tweets_from_file("inga_dubbletter2.txt")
+    tweets = get_tweets_from_file("all_tweets.txt")
     player_stats, competitions = make_competition_stats(write = False)
 
     check_performance_vs_tweets(tweets, competitions, player_stats, write = True)
