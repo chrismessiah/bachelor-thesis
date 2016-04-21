@@ -313,60 +313,65 @@ def check_performance_vs_tweets(tweets, competitions, player_stats, write = Fals
             if int(golfer) == tweet["user_id"]:
                 golfer_tweets.append(tweet)
                 golfer_afinnscore.append(tweet["score"])
-        
-        oldest = golfer_tweets[0]["date"]
-        for tw in golfer_tweets:
-            if tw["date"] < oldest:
-                oldest = tw["date"]
-                
-        print(oldest)
-        print(len(golfer_tweets))
+
+        #print(golfer_tweets)
+        if len(golfer_tweets) > 0:
+            oldest = golfer_tweets[0]["date"]
+
+            for tw in golfer_tweets:
+                if tw["date"] < oldest:
+                    oldest = tw["date"]
+
+            #print(oldest)
+            #print(len(golfer_tweets))
 
 
-        golfer_name = golfer_tweets[0]["realname"]
-        golfer_afinn_mean = np.mean(np.array(golfer_afinnscore)) #Get golfer AFINN average
-        #Make golfer afinnmeans file
-        #print(golfer_name, golfer_afinn_mean)
-        #with open("golfer_happymean.csv", "a") as f:
-        #    try:
-        #        f.write(golfer_name)
-        #        f.write(",")
-        #        f.write(str(golfer_afinn_mean))
-        #        f.write(",")
-        #        f.write("\n")
-        #    except UnicodeEncodeError:
-        #        f.write("UnicodeError player")
-        #        f.write(",")
-        #        f.write(str(golfer_afinn_mean))
-        #        f.write(",")
-        #        f.write("\n")                
-        #Get golfer average score:
-        try:
-            golfer_mean_z = sum(player_stats[golfer_name]) / len(player_stats[golfer_name])
-        except KeyError:
-            golfer_mean_z = error_handler(golfer_name, golfer)
+            golfer_name = golfer_tweets[0]["realname"]
+            golfer_afinn_mean = np.mean(np.array(golfer_afinnscore)) #Get golfer AFINN average
+            #Make golfer afinnmeans file
+            #print(golfer_name, golfer_afinn_mean)
+            #with open("golfer_happymean.csv", "a") as f:
+            #    try:
+            #        f.write(golfer_name)
+            #        f.write(",")
+            #        f.write(str(golfer_afinn_mean))
+            #        f.write(",")
+            #        f.write("\n")
+            #    except UnicodeEncodeError:
+            #        f.write("UnicodeError player")
+            #        f.write(",")
+            #        f.write(str(golfer_afinn_mean))
+            #        f.write(",")
+            #        f.write("\n")
+            #Get golfer average score:
+            try:
+                golfer_mean_z = sum(player_stats[golfer_name]) / len(player_stats[golfer_name])
+            except KeyError:
+                golfer_mean_z = error_handler(golfer_name, golfer)
 
-        #print(golfer_name, "AfinnMean: ", golfer_afinn_mean, "Z-mean: ", golfer_mean_z)
-        for competition in competitions:
-            """ Get golfers relative Afinn score """
-            date = datetime.datetime.strptime(competition["date"][0], "%Y-%m-%d") # 0 is start date, 1 is end date
-            interval_avg = tweet_interval_avg(date, 3, golfer_tweets)
-            if interval_avg != None:
-                afinn_diff = interval_avg #- golfer_afinn_mean #VARIABLE
-            else:
-                afinn_diff = None
-            """ Get golfers Z-score for competition"""
-            for stat in competition["player_stats"]:
-                try:
-                    if stat["name"] == golfer_name:
-                        score_diff = stat["z-score"] - golfer_mean_z
-                except KeyError:
-                    print("ERROR! No Z-score found for:", stat," in ", competition["name"])
-            if afinn_diff != None:
-                data_pairs.append([afinn_diff, score_diff])
+            #print(golfer_name, "AfinnMean: ", golfer_afinn_mean, "Z-mean: ", golfer_mean_z)
+            for competition in competitions:
+                """ Get golfers relative Afinn score """
+                date = datetime.datetime.strptime(competition["date"][0], "%Y-%m-%d") # 0 is start date, 1 is end date
+                interval_avg = tweet_interval_avg(date, 3, golfer_tweets)
+                if interval_avg != None:
+                    afinn_diff = interval_avg - golfer_afinn_mean #VARIABLE
+                else:
+                    afinn_diff = None
+                """ Get golfers Z-score for competition"""
+                for stat in competition["player_stats"]:
+                    try:
+                        if stat["name"] == golfer_name:
+                            score_diff = stat["z-score"] - golfer_mean_z
+                    except KeyError:
+                        print("ERROR! No Z-score found for:", stat," in ", competition["name"])
+                if afinn_diff != None:
+                    data_pairs.append([afinn_diff, score_diff])
+        else:
+            print("Error on golferID ",golfer)
 
     if write:
-        with open("3dagarinnantavling_absolutAfinn.csv", "w") as f:
+        with open("3dagarinnantavling_relativeAfinn.csv", "w") as f:
             for items in data_pairs:
                 f.write(str(items[0]))
                 f.write(",")
@@ -384,7 +389,7 @@ if __name__ == '__main__':
     #make_competition_stats()
 
     #WE NEED SOME STRING CLEANING HERE AT SOME POINT!
-    tweets = get_tweets_from_file("resultsFile.txt")
+    tweets = get_tweets_from_file("inga_dubbletter2.txt")
     player_stats, competitions = make_competition_stats(write = False)
 
-    check_performance_vs_tweets(tweets, competitions, player_stats, write = False)
+    check_performance_vs_tweets(tweets, competitions, player_stats, write = True)

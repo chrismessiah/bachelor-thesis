@@ -22,7 +22,7 @@ amont_of_tweets = 1000
 # User to fetch tweets from
 #nickname = "Michael__Putnam"
 
-#Variables that contains the user credentials to access Twitter API 
+#Variables that contains the user credentials to access Twitter API
 access_token = "4891415603-ZM8LKg9VjAqGxSIL4xo7jwbEbqkpyURDGl4UrOw"
 access_token_secret = "0hCSgD6YrC3wajSVcJ4G0OGFbkEIb1TTUvCFKUNscKcQG"
 consumer_key = "fUwv85bmP4B85Kry1ivTJwk1U"
@@ -74,7 +74,7 @@ def get_tweets(tweeter_id, from_id = None):
 def score_tweets(tweets):
     ratings = []
     for row in tweets:
-        tweetscore = afinn.score(row["text"]) 
+        tweetscore = afinn.score(row["text"])
         row["score"] = tweetscore
         ratings.append(tweetscore)
 
@@ -92,8 +92,8 @@ def wait_fifteen():
         print(i, " minutes waited")
     print("Retrying!")
 
-def run(tweeter_id):
-    """Gets two rounds of twitter user_ids, should be changed so it runs until 
+def run(tweeter_id, output_filename):
+    """Gets two rounds of twitter user_ids, should be changed so it runs until
     selected date is hit (if available) """
     print("Getting tweets for ID: ", tweeter_id)
     last_id = None
@@ -102,6 +102,9 @@ def run(tweeter_id):
         try:
             if last_id == None:
                 tweets, last_id = get_tweets(tweeter_id) # Get tweets via twitter API
+            elif last_id == 0 or i == 4:
+                output_tweets(alltweets, output_filename)
+                break
             else:
                 tweets, last_id = get_tweets(tweeter_id, last_id)
             result = score_tweets(tweets)
@@ -112,28 +115,21 @@ def run(tweeter_id):
             wait_fifteen()
             if last_id == None:
                 tweets, last_id = get_tweets(tweeter_id) # Get tweets via twitter API
+            elif last_id == 0 or i == 4:
+                output_tweets(alltweets, output_filename)
+                break
             else:
                 tweets, last_id = get_tweets(tweeter_id, last_id)
             result = score_tweets(tweets)
             print("Request" + str(i) + " ", len(tweets))
             alltweets = alltweets + result
-            #run(tweeter_id)
 
         except IndexError:
+            print("IndexError")
             return None
-        """
-        try:    
-            tweets, last_id = get_tweets(tweeter_id, last_id)
-            result_2 = score_tweets(tweets)
-            print("Request2 ", len(tweets))
-        except RateLimitError:
-            wait_fifteen()
-            tweets, last_id = get_tweets(tweeter_id, last_id)
-            result_2 = score_tweets(tweets)
-            #run(tweeter_id)
-        """
 
-    with open("testNewResultsFile.txt", "a") as f:
+def output_tweets(alltweets, output_filename):
+    with open(output_filename, "a") as f:
         for items in alltweets:
             f.write(str(items))
             f.write("\n")
@@ -142,29 +138,17 @@ def get_golfers():
     auth = OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
     api = API(auth)
-    
     golfers = api.friends_ids(screen_name = "golfjobb")
-    #with open("golferID.txt", "w") as f:
-    #    for items in golfers:
-    #        f.write(str(items))
-    #        f.write("\n")
-
-    print("GOlfers: ", golfers)
     return golfers
 
 if __name__ == '__main__':
+    output_filename = "twitter_mining_output2.txt"
+    error_filename = "twitter_mining_errors2.txt"
     golfers = get_golfers()
-
     for golfer_id in tqdm(golfers):
         try:
-            run(golfer_id)
+            run(golfer_id, output_filename)
         except TweepError:
-            with open("testNewResultsFile.txt", "a") as f:
+            with open(error_filename, "a") as f:
                 f.write("TweepError detected when processing: " +  str(golfer_id))
                 f.write("\n")
-
-
-
-
-
-
