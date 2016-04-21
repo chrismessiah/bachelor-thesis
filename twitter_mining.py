@@ -22,7 +22,7 @@ amont_of_tweets = 1000
 # User to fetch tweets from
 #nickname = "Michael__Putnam"
 
-#Variables that contains the user credentials to access Twitter API 
+#Variables that contains the user credentials to access Twitter API
 access_token = "4891415603-ZM8LKg9VjAqGxSIL4xo7jwbEbqkpyURDGl4UrOw"
 access_token_secret = "0hCSgD6YrC3wajSVcJ4G0OGFbkEIb1TTUvCFKUNscKcQG"
 consumer_key = "fUwv85bmP4B85Kry1ivTJwk1U"
@@ -74,7 +74,7 @@ def get_tweets(tweeter_id, from_id = None):
 def score_tweets(tweets):
     ratings = []
     for row in tweets:
-        tweetscore = afinn.score(row["text"]) 
+        tweetscore = afinn.score(row["text"])
         row["score"] = tweetscore
         ratings.append(tweetscore)
 
@@ -93,7 +93,7 @@ def wait_fifteen():
     print("Retrying!")
 
 def run(tweeter_id):
-    """Gets two rounds of twitter user_ids, should be changed so it runs until 
+    """Gets two rounds of twitter user_ids, should be changed so it runs until
     selected date is hit (if available) """
     print("Getting tweets for ID: ", tweeter_id)
     last_id = None
@@ -122,7 +122,7 @@ def run(tweeter_id):
         except IndexError:
             return None
         """
-        try:    
+        try:
             tweets, last_id = get_tweets(tweeter_id, last_id)
             result_2 = score_tweets(tweets)
             print("Request2 ", len(tweets))
@@ -142,7 +142,7 @@ def get_golfers():
     auth = OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
     api = API(auth)
-    
+
     golfers = api.friends_ids(screen_name = "golfjobb")
     #with open("golferID.txt", "w") as f:
     #    for items in golfers:
@@ -159,12 +159,6 @@ if __name__ == '__main__':
         try:
             run(golfer_id)
         except TweepError:
-            with open("testNewResultsFile.txt", "a") as f:
+            with open("outputChris21Apr.txt", "a") as f:
                 f.write("TweepError detected when processing: " +  str(golfer_id))
                 f.write("\n")
-
-
-
-
-
-

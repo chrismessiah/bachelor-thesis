@@ -313,12 +313,12 @@ def check_performance_vs_tweets(tweets, competitions, player_stats, write = Fals
             if int(golfer) == tweet["user_id"]:
                 golfer_tweets.append(tweet)
                 golfer_afinnscore.append(tweet["score"])
-        
+
         oldest = golfer_tweets[0]["date"]
         for tw in golfer_tweets:
             if tw["date"] < oldest:
                 oldest = tw["date"]
-                
+
         print(oldest)
         print(len(golfer_tweets))
 
@@ -339,7 +339,7 @@ def check_performance_vs_tweets(tweets, competitions, player_stats, write = Fals
         #        f.write(",")
         #        f.write(str(golfer_afinn_mean))
         #        f.write(",")
-        #        f.write("\n")                
+        #        f.write("\n")
         #Get golfer average score:
         try:
             golfer_mean_z = sum(player_stats[golfer_name]) / len(player_stats[golfer_name])
@@ -384,7 +384,7 @@ if __name__ == '__main__':
     #make_competition_stats()
 
     #WE NEED SOME STRING CLEANING HERE AT SOME POINT!
-    tweets = get_tweets_from_file("resultsFile.txt")
+    tweets = get_tweets_from_file("outputChris21Apr.txt")
     player_stats, competitions = make_competition_stats(write = False)
 
     check_performance_vs_tweets(tweets, competitions, player_stats, write = False)
