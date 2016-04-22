@@ -12,31 +12,24 @@ def get_tweets_from_file(filename):
 
 	return tweet_objects
 
-def tweet_interval_avg(dateObj, num_days, tweet_objects):
-    """Takes a datetime object, an int and a list of tweetobjecs and returns the average score
-    for tweets within that span.
 
-    Example dateOjb: dateObj = datetime.datetime.strptime("2015-06-01 00:00:00", "%Y-%m-%d %H:%M:%S") """
-
-    span = datetime.timedelta(days= num_days).total_seconds()
-    #print("SPAN: ", datetime.timedelta(days= num_days),
-    #    "Seconds:", datetime.timedelta(days= num_days).total_seconds())
-
+def tweet_interval_counter_and_score_avg(date, num_days_before, tweet_objects):
+    tweet_counter = 0
     total_score = 0
-    hits = 0
-    for tweet in tweet_objects:
-        #print((tweet["date"] - dateObj))
-        # Vill man ha efter: (A-C) < 0 and abs(A-C) < span
-        if 0 < ((tweet["date"] - dateObj).total_seconds()) < span  : #INNAN
-        #if ((tweet["date"] - dateObj).total_seconds()) < 0 and abs((tweet["date"] - dateObj).total_seconds()) < span:    #EFTER
-            #print("Hit within span, score: ", tweet["score"])
-            total_score += tweet["score"]
-            hits += 1
-
-    if hits == 0:
-        return None
+    span = abs(datetime.timedelta(days = num_days_before).total_seconds())
+    for tw in tweet_objects:
+        if num_days_before < 0: # tweets after tournament
+            if date < tw["date"] and  0 < (tw["date"] - date).total_seconds() < span:
+                tweet_counter += 1
+                total_score += tw["score"]
+        if num_days_before > 0: # tweets before tournament
+            if tw["date"] < date and  0 < (date - tw["date"]).total_seconds() < span:
+                tweet_counter += 1
+                total_score += tw["score"]
+    if tweet_counter == 0:
+        return None, tweet_counter
     else:
-        return total_score / hits
+        return total_score / tweet_counter, tweet_counter
 
 def get_stats_from_file(filename):
     stat_objects = []
@@ -299,7 +292,8 @@ def tweets_per_golfer(tweets):
         golf_list.append(golfers)
     return golf_list
 
-def check_performance_vs_tweets(tweets, competitions, player_stats, write = False):
+def check_performance_vs_tweets(tweets, competitions, player_stats, relative_or_absolute, days_before, tweet_lower_limit, write = False):
+    days = days_before
     #print(player_stats)
     with open("golferID.txt") as f:
         golferIDs = f.read().splitlines()
@@ -353,10 +347,14 @@ def check_performance_vs_tweets(tweets, competitions, player_stats, write = Fals
             for competition in competitions:
                 """ Get golfers relative Afinn score """
                 date = datetime.datetime.strptime(competition["date"][0], "%Y-%m-%d") # 0 is start date, 1 is end date
-                interval_avg = tweet_interval_avg(date, 5, golfer_tweets)
+                interval_avg, tweet_counter = tweet_interval_counter_and_score_avg(date, days, golfer_tweets)
                 if interval_avg != None:
-                    afinn_diff = interval_avg - golfer_afinn_mean # relative
-                    #afinn_diff = interval_avg                     # absolute
+                    if relative_or_absolute == "a":
+                        afinn_diff = interval_avg # absolute
+                    elif relative_or_absolute == "r":
+                        afinn_diff = interval_avg - golfer_afinn_mean # relative
+                    else:
+                        print("ERROR ON R/A")
                 else:
                     afinn_diff = None
                 """ Get golfers Z-score for competition"""
@@ -368,30 +366,26 @@ def check_performance_vs_tweets(tweets, competitions, player_stats, write = Fals
                         print("ERROR! No Z-score found for:", stat," in ", competition["name"])
                 if afinn_diff != None:
                     data_pairs.append([afinn_diff, score_diff])
+                if tweet_counter >= tweet_lower_limit and write and interval_avg != None:
+                    with open("official_runs/other.csv", "a") as f:
+                        for items in data_pairs:
+                            f.write(str(items[0]))
+                            f.write(",")
+                            f.write(str(items[1]))
+                            f.write(",")
+                            f.write("\n")
+                data_pairs = []
         else:
             print("Error on golferID ",golfer)
 
-    if write:
-        with open("official_runs/1dagarinnantavling_relativeAfinn.csv", "w") as f:
-        #with open("official_runs/5dagarinnantavling_absolutAfinn.csv", "w") as f:
-            for items in data_pairs:
-                f.write(str(items[0]))
-                f.write(",")
-                f.write(str(items[1]))
-                f.write(",")
-                f.write("\n")
-    #for items in data_pairs:
-    #    print(items)
     return data_pairs
 
 if __name__ == '__main__':
-    #avg = tweet_interval_avg(datetime.datetime.strptime("2015-06-01" ,"%Y-%m-%d"), 3, tweets)
-    #print("Average within 5 days from 2016-06-01: ", avg)
-    #print(tweets_per_golfer(tweets))
-    #make_competition_stats()
+    relative_or_absolute = "a" # a or r
+    days_before = -3 # Can be negative to imply AFTER competition
+    tweet_lower_limit = 0
 
-    #WE NEED SOME STRING CLEANING HERE AT SOME POINT!
     tweets = get_tweets_from_file("all_tweets.txt")
     player_stats, competitions = make_competition_stats(write = False)
 
-    check_performance_vs_tweets(tweets, competitions, player_stats, write = True)
+    check_performance_vs_tweets(tweets, competitions, player_stats, relative_or_absolute, days_before, tweet_lower_limit, write = True)
