@@ -365,6 +365,8 @@ def check_performance_vs_tweets(tweets, competitions, player_stats, relative_or_
                     except KeyError:
                         print("ERROR! No Z-score found for:", stat," in ", competition["name"])
                 if afinn_diff != None:
+                    # if afinn_diff > 0:
+                    #     data_pairs.append([afinn_diff, score_diff])
                     data_pairs.append([afinn_diff, score_diff])
                 if tweet_counter >= tweet_lower_limit and write and interval_avg != None:
                     with open("official_runs/other.csv", "a") as f:
@@ -381,9 +383,9 @@ def check_performance_vs_tweets(tweets, competitions, player_stats, relative_or_
     return data_pairs
 
 if __name__ == '__main__':
-    relative_or_absolute = "a" # a or r
-    days_before = -3 # Can be negative to imply AFTER competition
-    tweet_lower_limit = 0
+    relative_or_absolute = "r" # a or r
+    days_before = 3 # Can be negative to imply AFTER competition
+    tweet_lower_limit = 1
 
     tweets = get_tweets_from_file("all_tweets.txt")
     player_stats, competitions = make_competition_stats(write = False)
