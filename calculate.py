@@ -381,8 +381,8 @@ def check_performance_vs_tweets(tweets, competitions, player_stats, relative_or_
     return data_pairs
 
 if __name__ == '__main__':
-    relative_or_absolute = "r"
-    days_before = 1
+    relative_or_absolute = "a" # a or r
+    days_before = -3 # Can be negative to imply AFTER competition
     tweet_lower_limit = 0
 
     tweets = get_tweets_from_file("all_tweets.txt")
