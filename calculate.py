@@ -184,7 +184,7 @@ def make_competition_stats(write = False):
     competitions = create_competition_stat_object()
     for competition in competitions:
         #print("Getting stats for", competition["name"])
-        stat_objects = get_stats_from_file("golfdata/2015/" + competition["name"] + "_stats.txt")
+        stat_objects = get_stats_from_file("golf_stats/2015/" + competition["name"] + "_stats.txt")
         stat_objects = clean_stat_object(stat_objects)
         stat_objects = correct_round_data(stat_objects)
         player_stats, mean, z_mean, std = make_z_scores(stat_objects)
@@ -295,7 +295,7 @@ def tweets_per_golfer(tweets):
 def check_performance_vs_tweets(tweets, competitions, player_stats, relative_or_absolute, days_before, tweet_lower_limit, write = False):
     days = days_before
     #print(player_stats)
-    with open("golferID.txt") as f:
+    with open("golfer_twitter_ids.txt") as f:
         golferIDs = f.read().splitlines()
     data_pairs = []
     #TODO: Make into a loop for all golfers!
