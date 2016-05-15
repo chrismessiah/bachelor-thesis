@@ -142,8 +142,8 @@ def get_golfers():
     return golfers
 
 if __name__ == '__main__':
-    output_filename = "twitter_mining_output2.txt"
-    error_filename = "twitter_mining_errors2.txt"
+    output_filename = "twitter_mining_output.txt"
+    error_filename = "twitter_mining_errors.txt"
     golfers = get_golfers()
     for golfer_id in tqdm(golfers):
         try:

@@ -184,7 +184,7 @@ def make_competition_stats(write = False):
     competitions = create_competition_stat_object()
     for competition in competitions:
         #print("Getting stats for", competition["name"])
-        stat_objects = get_stats_from_file("golf_stats/2015/" + competition["name"] + "_stats.txt")
+        stat_objects = get_stats_from_file("../get_golfstats/stats2015/" + competition["name"] + "_stats.txt")
         stat_objects = clean_stat_object(stat_objects)
         stat_objects = correct_round_data(stat_objects)
         player_stats, mean, z_mean, std = make_z_scores(stat_objects)
@@ -194,33 +194,33 @@ def make_competition_stats(write = False):
         competition["z-mean"] = z_mean
         competition["std"] = std
 
-    with open("competition_stats.csv", "w") as f:
-        for competition in competitions:
-            if write:
-                    f.write(competition["name"])
-                    f.write(",")
-                    f.write(str(competition["mean"]))
-                    f.write(",")
-                    f.write(str(competition["z-mean"]))
-                    f.write(",")
-                    f.write(str(competition["std"]))
-                    f.write(",")
-                    f.write("\n")
+    if write:
+	    with open("competition_stats.csv", "a") as f:
+	        for competition in competitions:
+		        f.write(competition["name"])
+		        f.write(",")
+		        f.write(str(competition["mean"]))
+		        f.write(",")
+		        f.write(str(competition["z-mean"]))
+		        f.write(",")
+		        f.write(str(competition["std"]))
+		        f.write(",")
+		        f.write("\n")
 
     player_stats = make_individual_stats(competitions)
-    with open("zscores_2015.csv", "w") as f:
-        for name, score in player_stats.iteritems():
-                score = np.array(score)
-                mean = np.mean(score)
-                if write:
-                    if len(score) > 10:
-                        f.write(str(name))
-                        f.write(",")
-                        f.write(str(mean))
-                        f.write(",")
-                        f.write(str(len(score)))
-                        f.write(",")
-                        f.write("\n")
+    for name, score in player_stats.iteritems():
+        score = np.array(score)
+        mean = np.mean(score)
+        if write:
+        	with open("zscores_2015.csv", "a") as f:
+	            if len(score) > 10:
+	                f.write(str(name))
+	                f.write(",")
+	                f.write(str(mean))
+	                f.write(",")
+	                f.write(str(len(score)))
+	                f.write(",")
+	                f.write("\n")
 
     return player_stats, competitions
 def error_handler(name, golfer_id):
@@ -295,7 +295,7 @@ def tweets_per_golfer(tweets):
 def check_performance_vs_tweets(tweets, competitions, player_stats, relative_or_absolute, days_before, tweet_lower_limit, write = False):
     days = days_before
     #print(player_stats)
-    with open("golfer_twitter_ids.txt") as f:
+    with open("../twitter_mining/golfer_twitter_ids.txt") as f:
         golferIDs = f.read().splitlines()
     data_pairs = []
     #TODO: Make into a loop for all golfers!
@@ -369,7 +369,7 @@ def check_performance_vs_tweets(tweets, competitions, player_stats, relative_or_
                     #     data_pairs.append([afinn_diff, score_diff])
                     data_pairs.append([afinn_diff, score_diff])
                 if tweet_counter >= tweet_lower_limit and write and interval_avg != None:
-                    with open("official_runs/other.csv", "a") as f:
+                    with open("output_datapairs.csv", "a") as f:
                         for items in data_pairs:
                             f.write(str(items[0]))
                             f.write(",")
@@ -383,11 +383,14 @@ def check_performance_vs_tweets(tweets, competitions, player_stats, relative_or_
     return data_pairs
 
 if __name__ == '__main__':
+
+	# *************** STARTING PARAMETERS *************
     relative_or_absolute = "r" # a or r
     days_before = 3 # Can be negative to imply AFTER competition
-    tweet_lower_limit = 1
+    tweet_lower_limit = 1 # ≥ 1
+    # *************** STARTING PARAMETERS *************
 
-    tweets = get_tweets_from_file("all_tweets.txt")
+    tweets = get_tweets_from_file("../twitter_mining/all_tweets.txt")
     player_stats, competitions = make_competition_stats(write = False)
 
     check_performance_vs_tweets(tweets, competitions, player_stats, relative_or_absolute, days_before, tweet_lower_limit, write = True)

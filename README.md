@@ -1,22 +1,24 @@
-# golfjobb
+# Predict golfer statistics using sentiment analysis on Twitter
 
-### Requirements
+Authors: *Christian Abdelmassih* & *Axel Hultman*
 
-* Pip
-* Tweepy
-# Golfjobb
+This repo contains the written software used in our bachelor thesis (to be published). It contains the four programs which we wrote to our study. These are
+
+*  make_golferstats2015.py and make_golferstats2016.py
+*  twitter_mining.py
+*  construct_datapairs.py
 
 ## Features:
-- Get list of 'golfkex' followers
-- Get tweets from API with (not fully tested) error handling
-- Score tweets
-- Save tweets to file, dict on every line.
-- Calculate avrage within timespan (calculate.py)
+- Get tweets using Tweepy API with error handling
 
-## ToDo:
-- Get golfer statistics from PGA
-- Statistics modules to calculate.py
+- Calculate relative or absolute sentiment-score of tweets for a golfer and competition
 
+- Calculate performance-score of a golfer and competition
+
+## Requirements
+
+- Pip
+- Tweepy
 
 ## Installation
 ```
@@ -27,15 +29,4 @@ $ git clone https://github.com/fnielsen/afinn.git
 $ touch afinn/__init__.py
 $ cd tweepy
 $ sudo python setup.py install
-
-```
-
-## Running
-
-```
-To get tweets from twitter, takes a long time due to API constaints.
-$ python twitter_mining.py
-
-To save output
-
 ```
