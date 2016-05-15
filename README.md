@@ -2,12 +2,12 @@
 
 Authors: *Christian Abdelmassih* & *Axel Hultman*
 
-This repo contains the written software used in our bachelor thesis (to be published). It contains the programs which we wrote to our study. These are
+This repo contains the software used in bachelor thesis submitted at KTH, Royal Institute of Technology (yet to be published). The repo contains the following programs
 
-*  `make_golferstats2015.py`
-*  `make_golferstats2016.py`
-*  `twitter_mining.py`
-*  `construct_datapairs.py`
+*  `make_golferstats2015.py` used to parse stats in HTML-files into objects
+*  `make_golferstats2016.py` as above 
+*  `twitter_mining.py` used to mine the 1000 latest tweets from the verified golfers' accounts.
+*  `construct_datapairs.py` used to construct datapairs of mean AFINN score and relative player-performance to be later used in the regression model.
 
 ## Features:
 - Get tweets using Tweepy API with error handling
