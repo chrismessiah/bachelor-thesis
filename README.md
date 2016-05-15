@@ -1,4 +1,4 @@
-# Predict golfer statistics using sentiment analysis on Twitter
+# Predict golfer performance using sentiment analysis on Twitter
 
 Authors: *Christian Abdelmassih* & *Axel Hultman*
 
