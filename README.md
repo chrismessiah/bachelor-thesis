@@ -2,11 +2,12 @@
 
 Authors: *Christian Abdelmassih* & *Axel Hultman*
 
-This repo contains the written software used in our bachelor thesis (to be published). It contains the four programs which we wrote to our study. These are
+This repo contains the written software used in our bachelor thesis (to be published). It contains the programs which we wrote to our study. These are
 
-*  make_golferstats2015.py and make_golferstats2016.py
-*  twitter_mining.py
-*  construct_datapairs.py
+*  `make_golferstats2015.py`
+*  `make_golferstats2016.py`
+*  `twitter_mining.py`
+*  `construct_datapairs.py`
 
 ## Features:
 - Get tweets using Tweepy API with error handling
