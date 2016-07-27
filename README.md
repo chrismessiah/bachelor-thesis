@@ -2,7 +2,7 @@
 
 Authors: *Christian Abdelmassih* & *Axel Hultman*
 
-This repo contains the software used in bachelor thesis submitted at KTH, Royal Institute of Technology (yet to be published). The repo contains the following programs
+This repo contains the software used in bachelor thesis submitted at KTH, Royal Institute of Technology and [is available here](http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-188835) in Swedish. The repo contains the following programs
 
 *  `make_golferstats2015.py` used to parse stats in HTML-files into objects
 *  `make_golferstats2016.py` as above 
